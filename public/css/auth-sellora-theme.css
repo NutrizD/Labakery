@@ -1,0 +1,165 @@
+/* ===== AUTH PAGES SELLORA THEME ===== */
+/* This file overrides auth page specific styles with Sellora blue theme */
+
+/* ===== AUTH PAGE BACKGROUNDS ===== */
+
+/* Login, Register, Forgot Password, Reset Password pages */
+.content-wrapper {
+    background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%) !important;
+    min-height: 100vh;
+}
+
+/* ===== FORM STYLING ===== */
+
+/* Form controls focus state */
+.form-control:focus {
+    border-color: #3B82F6 !important;
+    box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.25) !important;
+}
+
+/* Primary buttons */
+.btn-primary {
+    background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%) !important;
+    border: none !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #2563EB 0%, #1E40AF 100%) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 5px 15px rgba(59, 130, 246, 0.35) !important;
+}
+
+/* ===== AUTH LINKS ===== */
+
+/* Links in auth forms */
+.auth-link:hover {
+    color: #3B82F6 !important;
+}
+
+/* ===== FORM VALIDATION ===== */
+
+/* Invalid feedback */
+.invalid-feedback {
+    color: #EF4444 !important;
+}
+
+/* Invalid form controls */
+.form-control.is-invalid {
+    border-color: #EF4444 !important;
+}
+
+.form-control.is-invalid:focus {
+    border-color: #EF4444 !important;
+    box-shadow: 0 0 0 0.2rem rgba(239, 68, 68, 0.25) !important;
+}
+
+/* ===== AUTH FORM CONTAINER ===== */
+
+/* Auth form styling */
+.auth-form-light {
+    background: #ffffff !important;
+    border-radius: 15px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+    border: 1px solid #E2E8F0 !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+/* ===== BRAND LOGO ===== */
+
+/* Logo styling */
+.brand-logo img {
+    max-width: 80px !important;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1)) !important;
+}
+
+/* ===== TYPOGRAPHY ===== */
+
+/* Headings */
+h4, h6 {
+    color: #1E293B !important;
+}
+
+/* Form labels and text */
+.form-group label,
+.text-muted {
+    color: #475569 !important;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+
+@media (max-width: 768px) {
+    .auth-form-light {
+        margin: 15px !important;
+        padding: 20px !important;
+    }
+    
+    .content-wrapper {
+        padding: 15px !important;
+    }
+}
+
+/* ===== ANIMATIONS ===== */
+
+/* Smooth transitions */
+.form-control,
+.btn-primary,
+.auth-link {
+    transition: all 0.3s ease !important;
+}
+
+/* ===== FOCUS STATES ===== */
+
+/* Focus outline for accessibility */
+.btn-primary:focus,
+.form-control:focus {
+    outline: none !important;
+}
+
+/* ===== HOVER EFFECTS ===== */
+
+/* Button hover effects */
+.btn-primary:hover {
+    transform: translateY(-2px) !important;
+}
+
+/* Form control hover */
+.form-control:hover {
+    border-color: #CBD5E1 !important;
+}
+
+/* ===== CUSTOM UTILITIES ===== */
+
+/* Sellora blue text */
+.text-sellora-blue {
+    color: #3B82F6 !important;
+}
+
+/* Sellora dark text */
+.text-sellora-dark {
+    color: #1E293B !important;
+}
+
+/* Sellora light background */
+.bg-sellora-light {
+    background-color: #EFF6FF !important;
+}
+
+/* ===== OVERRIDE ANY REMAINING OLD COLORS ===== */
+
+/* Force override any remaining orange/old colors */
+[style*="#667eea"],
+[style*="#764ba2"],
+[style*="#ff6b35"],
+[style*="#f7931e"] {
+    color: #3B82F6 !important;
+    background-color: #3B82F6 !important;
+    border-color: #3B82F6 !important;
+}
+
+/* Override inline styles */
+[style*="background: linear-gradient(135deg, #667eea"],
+[style*="background: linear-gradient(135deg, #ff6b35"] {
+    background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%) !important;
+}

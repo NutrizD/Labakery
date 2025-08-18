@@ -1,0 +1,290 @@
+/* ===== SELLORA THEME OVERRIDE ===== */
+/* This file overrides the default template colors with Sellora blue theme */
+
+/* ===== PRIMARY COLORS ===== */
+:root {
+  --sellora-blue: #3B82F6;
+  --sellora-blue-dark: #2563EB;
+  --sellora-blue-light: #DBEAFE;
+  --sellora-blue-lighter: #EFF6FF;
+  --sellora-gray-dark: #1E293B;
+  --sellora-gray-medium: #475569;
+  --sellora-gray-light: #64748B;
+  --sellora-white: #FFFFFF;
+  --sellora-gray-50: #F8FAFC;
+  --sellora-gray-100: #F1F5F9;
+  --sellora-gray-200: #E2E8F0;
+  --sellora-gray-300: #CBD5E1;
+}
+
+/* ===== OVERRIDE TEMPLATE COLORS ===== */
+
+/* Primary buttons and links */
+.btn-primary,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-primary:hover {
+  background-color: var(--sellora-blue) !important;
+  border-color: var(--sellora-blue) !important;
+  color: var(--sellora-white) !important;
+}
+
+.btn-primary:hover {
+  background-color: var(--sellora-blue-dark) !important;
+  border-color: var(--sellora-blue-dark) !important;
+}
+
+/* Text colors */
+.text-primary,
+a.text-primary {
+  color: var(--sellora-blue) !important;
+}
+
+.text-primary:hover {
+  color: var(--sellora-blue-dark) !important;
+}
+
+/* Background colors */
+.bg-primary {
+  background-color: var(--sellora-blue) !important;
+  color: var(--sellora-white) !important;
+}
+
+.bg-primary-light {
+  background-color: var(--sellora-blue-light) !important;
+}
+
+.bg-primary-lighter {
+  background-color: var(--sellora-blue-lighter) !important;
+}
+
+/* Border colors */
+.border-primary {
+  border-color: var(--sellora-blue) !important;
+}
+
+/* ===== SIDEBAR OVERRIDES ===== */
+
+/* Sidebar active states */
+.sidebar .nav .nav-item.active > .nav-link,
+.sidebar .nav .nav-item .nav-link.active {
+  background-color: var(--sellora-blue) !important;
+  color: var(--sellora-white) !important;
+}
+
+.sidebar .nav .nav-item .nav-link:hover {
+  background-color: var(--sellora-blue-light) !important;
+  color: var(--sellora-blue-dark) !important;
+}
+
+/* Sidebar icons */
+.sidebar .nav .nav-item .nav-link i,
+.sidebar .nav .nav-item .nav-link .menu-icon {
+  color: var(--sellora-blue) !important;
+}
+
+.sidebar .nav .nav-item.active .nav-link i,
+.sidebar .nav .nav-item.active .nav-link .menu-icon {
+  color: var(--sellora-white) !important;
+}
+
+/* ===== NAVBAR OVERRIDES ===== */
+
+/* Navbar brand and links */
+.navbar-brand {
+  color: var(--sellora-gray-dark) !important;
+}
+
+.navbar-nav .nav-link {
+  color: var(--sellora-gray-medium) !important;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus {
+  color: var(--sellora-blue) !important;
+}
+
+/* ===== CARD OVERRIDES ===== */
+
+/* Card headers */
+.card-header {
+  background-color: var(--sellora-gray-50) !important;
+  border-bottom-color: var(--sellora-gray-200) !important;
+}
+
+.card-title {
+  color: var(--sellora-gray-dark) !important;
+}
+
+/* ===== FORM OVERRIDES ===== */
+
+/* Form controls focus */
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--sellora-blue) !important;
+  box-shadow: 0 0 0 0.2rem rgba(59, 130, 246, 0.25) !important;
+}
+
+/* Form labels */
+.form-label,
+label {
+  color: var(--sellora-gray-dark) !important;
+}
+
+/* ===== TABLE OVERRIDES ===== */
+
+/* Table headers */
+.table thead th {
+  background-color: var(--sellora-gray-50) !important;
+  color: var(--sellora-gray-dark) !important;
+  border-bottom-color: var(--sellora-gray-200) !important;
+}
+
+/* Table striped rows */
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: var(--sellora-blue-lighter) !important;
+}
+
+/* ===== ALERT OVERRIDES ===== */
+
+/* Primary alerts */
+.alert-primary {
+  background-color: var(--sellora-blue-lighter) !important;
+  border-color: var(--sellora-blue) !important;
+  color: var(--sellora-gray-dark) !important;
+}
+
+/* ===== BADGE OVERRIDES ===== */
+
+/* Primary badges */
+.badge-primary,
+.badge.bg-primary {
+  background-color: var(--sellora-blue) !important;
+  color: var(--sellora-white) !important;
+}
+
+/* ===== PAGINATION OVERRIDES ===== */
+
+/* Active page */
+.page-item.active .page-link {
+  background-color: var(--sellora-blue) !important;
+  border-color: var(--sellora-blue) !important;
+  color: var(--sellora-white) !important;
+}
+
+/* Page links */
+.page-link {
+  color: var(--sellora-blue) !important;
+}
+
+.page-link:hover {
+  color: var(--sellora-blue-dark) !important;
+}
+
+/* ===== DROPDOWN OVERRIDES ===== */
+
+/* Dropdown items hover */
+.dropdown-item:hover {
+  background-color: var(--sellora-blue-light) !important;
+  color: var(--sellora-blue-dark) !important;
+}
+
+/* ===== MODAL OVERRIDES ===== */
+
+/* Modal headers */
+.modal-header {
+  background-color: var(--sellora-gray-50) !important;
+  border-bottom-color: var(--sellora-gray-200) !important;
+}
+
+.modal-title {
+  color: var(--sellora-gray-dark) !important;
+}
+
+/* ===== UTILITY CLASSES ===== */
+
+/* Text colors */
+.text-sellora-blue {
+  color: var(--sellora-blue) !important;
+}
+
+.text-sellora-gray-dark {
+  color: var(--sellora-gray-dark) !important;
+}
+
+.text-sellora-gray-medium {
+  color: var(--sellora-gray-medium) !important;
+}
+
+/* Background colors */
+.bg-sellora-blue {
+  background-color: var(--sellora-blue) !important;
+  color: var(--sellora-white) !important;
+}
+
+.bg-sellora-blue-light {
+  background-color: var(--sellora-blue-light) !important;
+}
+
+.bg-sellora-blue-lighter {
+  background-color: var(--sellora-blue-lighter) !important;
+}
+
+.bg-sellora-gray-50 {
+  background-color: var(--sellora-gray-50) !important;
+}
+
+/* Border colors */
+.border-sellora-blue {
+  border-color: var(--sellora-blue) !important;
+}
+
+.border-sellora-gray-200 {
+  border-color: var(--sellora-gray-200) !important;
+}
+
+/* ===== HOVER EFFECTS ===== */
+
+/* Cards */
+.card:hover {
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15) !important;
+}
+
+/* Buttons */
+.btn:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.2) !important;
+}
+
+/* ===== RESPONSIVE ADJUSTMENTS ===== */
+
+@media (max-width: 768px) {
+  .sidebar {
+    background-color: var(--sellora-blue) !important;
+  }
+  
+  .sidebar .nav .nav-item .nav-link {
+    color: var(--sellora-white) !important;
+  }
+  
+  .sidebar .nav .nav-item .nav-link:hover {
+    background-color: var(--sellora-blue-dark) !important;
+    color: var(--sellora-white) !important;
+  }
+}
+
+/* ===== FORCE OVERRIDE IMPORTANT ELEMENTS ===== */
+
+/* Any remaining orange/old colors */
+[style*="#ff6b35"],
+[style*="#f7931e"],
+[style*="#fb923c"] {
+  color: var(--sellora-blue) !important;
+  background-color: var(--sellora-blue) !important;
+  border-color: var(--sellora-blue) !important;
+}
+
+/* Override any inline styles */
+[style*="color: #ff6b35"] { color: var(--sellora-blue) !important; }
+[style*="background-color: #ff6b35"] { background-color: var(--sellora-blue) !important; }
+[style*="border-color: #ff6b35"] { border-color: var(--sellora-blue) !important; }

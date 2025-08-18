@@ -1,0 +1,288 @@
+/* ===== TRANSACTION DETAIL PAGE FIXES ===== */
+/* This file fixes specific issues on transaction detail pages */
+
+/* ===== TRANSACTION ID CARD ===== */
+
+/* Main transaction ID display card - NOW WHITE WITH BLUE BORDER */
+.transaction-id-card,
+.invoice-card,
+.order-card,
+.reference-card,
+.id-display-card,
+.card[class*="transaction"],
+.card[class*="invoice"],
+.card[class*="order"],
+.card[class*="reference"] {
+    background: #FFFFFF !important;
+    color: #1E293B !important;
+    border: 2px solid #3B82F6 !important;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.1) !important;
+}
+
+/* Transaction ID text specifically - NOW BLACK */
+.transaction-id,
+.invoice-id,
+.order-id,
+.reference-id,
+.transaction-number,
+.invoice-number,
+.order-number,
+.reference-number,
+.id-text,
+.number-text,
+.code-text {
+    color: #1E293B !important;
+    font-weight: 700 !important;
+    font-size: 1.3rem !important;
+    text-shadow: none !important;
+    letter-spacing: 0.5px !important;
+    text-align: center !important;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* ===== PAYMENT INFORMATION CARDS ===== */
+
+/* Payment info cards with colored borders */
+.payment-info-card,
+.payment-details-card,
+.financial-info-card,
+.card.border-success,
+.card.border-info,
+.card.border-primary {
+    background: #FFFFFF !important;
+    color: #1E293B !important;
+    border: 2px solid #E2E8F0 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Payment info text */
+.payment-info-card *,
+.payment-details-card *,
+.financial-info-card *,
+.card.border-success *,
+.card.border-info *,
+.card.border-primary * {
+    color: #1E293B !important;
+}
+
+/* Total shopping amount */
+.total-belanja,
+.total-shopping,
+.total-amount,
+.total-price {
+    color: #DC2626 !important;
+    font-weight: 700 !important;
+    font-size: 1.1rem !important;
+}
+
+/* Paid amount */
+.dibayar,
+.paid-amount,
+.amount-paid {
+    color: #3B82F6 !important;
+    font-weight: 600 !important;
+}
+
+/* Change amount */
+.kembalian,
+.change-amount,
+.amount-change {
+    color: #059669 !important;
+    font-weight: 600 !important;
+}
+
+/* ===== PRODUCT DETAILS TABLE ===== */
+
+/* Product table container */
+.product-details-table,
+.product-table,
+.items-table,
+.order-items-table {
+    background: #FFFFFF !important;
+    border: 1px solid #E2E8F0 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Table headers */
+.product-details-table th,
+.product-table th,
+.items-table th,
+.order-items-table th {
+    background: #F8FAFC !important;
+    color: #1E293B !important;
+    font-weight: 600 !important;
+    border-bottom: 2px solid #E2E8F0 !important;
+    padding: 12px 16px !important;
+}
+
+/* Table cells */
+.product-details-table td,
+.product-table td,
+.items-table td,
+.order-items-table td {
+    color: #1E293B !important;
+    border-bottom: 1px solid #F1F5F9 !important;
+    padding: 12px 16px !important;
+}
+
+/* Product name */
+.product-name,
+.item-name,
+.product-title {
+    color: #1E293B !important;
+    font-weight: 500 !important;
+}
+
+/* Product category */
+.product-category,
+.item-category,
+.category-text {
+    color: #64748B !important;
+    font-size: 0.9rem !important;
+}
+
+/* Unit price */
+.unit-price,
+.harga-satuan,
+.price-per-unit {
+    color: #1E293B !important;
+    font-weight: 500 !important;
+}
+
+/* Quantity */
+.quantity,
+.jumlah,
+.qty {
+    color: #1E293B !important;
+    font-weight: 500 !important;
+    text-align: center !important;
+}
+
+/* Subtotal */
+.subtotal,
+.sub-total {
+    color: #059669 !important;
+    font-weight: 600 !important;
+}
+
+/* Total row */
+.total-row,
+.final-total,
+.grand-total {
+    background: #F8FAFC !important;
+    border-top: 2px solid #E2E8F0 !important;
+}
+
+.total-row td,
+.final-total td,
+.grand-total td {
+    color: #DC2626 !important;
+    font-weight: 700 !important;
+    font-size: 1.1rem !important;
+}
+
+/* ===== NAVIGATION BUTTONS ===== */
+
+/* Back button */
+.btn-back,
+.btn-kembali,
+.back-button {
+    background: #6B7280 !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    padding: 10px 20px !important;
+    border-radius: 6px !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-back:hover,
+.btn-kembali:hover,
+.back-button:hover {
+    background: #4B5563 !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Primary action button */
+.btn-primary-action,
+.btn-main,
+.primary-button {
+    background: #3B82F6 !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    padding: 12px 24px !important;
+    border-radius: 6px !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-primary-action:hover,
+.btn-main:hover,
+.primary-button:hover {
+    background: #2563EB !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 6px 12px rgba(59, 130, 246, 0.3) !important;
+}
+
+/* ===== RESPONSIVE FIXES ===== */
+
+@media (max-width: 768px) {
+    /* Mobile adjustments */
+    .transaction-id,
+    .invoice-id,
+    .order-id {
+        font-size: 1.1rem !important;
+        color: #1E293B !important;
+    }
+    
+    .product-details-table th,
+    .product-details-table td {
+        padding: 8px 12px !important;
+        font-size: 0.9rem !important;
+    }
+    
+    .btn-back,
+    .btn-primary-action {
+        padding: 8px 16px !important;
+        font-size: 0.9rem !important;
+    }
+}
+
+/* ===== FORCE OVERRIDE ANY CONFLICTING STYLES ===== */
+
+/* Ensure all text in blue cards is now BLACK */
+*[style*="background-color: #3B82F6"] *,
+*[style*="background-color: #2563EB"] *,
+*[style*="background-color: #1E40AF"] *,
+*[style*="background: #3B82F6"] *,
+*[style*="background: #2563EB"] *,
+*[style*="background: #1E40AF"] * {
+    color: #1E293B !important;
+}
+
+/* Ensure all text in white cards is dark */
+.card[style*="background-color: #FFFFFF"] *,
+.card[style*="background: #FFFFFF"] *,
+.card[style*="background-color: white"] *,
+.card[style*="background: white"] * {
+    color: #1E293B !important;
+}
+
+/* ===== ADDITIONAL OVERRIDES FOR BLUE CARDS ===== */
+
+/* Force any remaining blue background elements to be white */
+*[style*="background-color: #3B82F6"],
+*[style*="background-color: #2563EB"],
+*[style*="background-color: #1E40AF"],
+*[style*="background: #3B82F6"],
+*[style*="background: #2563EB"],
+*[style*="background: #1E40AF"] {
+    background: #FFFFFF !important;
+    color: #1E293B !important;
+    border: 2px solid #3B82F6 !important;
+}

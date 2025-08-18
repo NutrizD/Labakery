@@ -1,0 +1,268 @@
+/* ===== BLUE BACKGROUND CARD FIXES ===== */
+/* This file ensures text in blue background cards is readable */
+
+/* ===== TRANSACTION ID CARD FIXES ===== */
+
+/* Main transaction ID card with blue background - CHANGE TO WHITE */
+.card.bg-primary,
+.card.bg-info,
+.card.bg-blue,
+.card[style*="background-color: #3B82F6"],
+.card[style*="background-color: #2563EB"],
+.card[style*="background-color: #1E40AF"],
+.card[style*="background: #3B82F6"],
+.card[style*="background: #2563EB"],
+.card[style*="background: #1E40AF"],
+.card[style*="background-color: blue"],
+.card[style*="background: blue"],
+.card[style*="background-color: rgb(59, 130, 246)"],
+.card[style*="background: rgb(59, 130, 246)"],
+.card[style*="background-color: rgb(37, 99, 235)"],
+.card[style*="background: rgb(37, 99, 235)"] {
+    background: #FFFFFF !important;
+    color: #1E293B !important;
+    border: 2px solid #3B82F6 !important;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.1) !important;
+}
+
+/* Ensure ALL text elements in blue cards are now BLACK */
+.card.bg-primary *,
+.card.bg-info *,
+.card.bg-blue *,
+.card[style*="background-color: #3B82F6"] *,
+.card[style*="background-color: #2563EB"] *,
+.card[style*="background-color: #1E40AF"] *,
+.card[style*="background: #3B82F6"] *,
+.card[style*="background: #2563EB"] *,
+.card[style*="background: #1E40AF"] *,
+.card[style*="background-color: blue"] *,
+.card[style*="background: blue"] *,
+.card[style*="background-color: rgb(59, 130, 246)"] *,
+.card[style*="background: rgb(59, 130, 246)"] *,
+.card[style*="background-color: rgb(37, 99, 235)"] *,
+.card[style*="background: rgb(37, 99, 235)"] * {
+    color: #1E293B !important;
+}
+
+/* ===== SPECIFIC TEXT ELEMENT FIXES ===== */
+
+/* Transaction ID, Invoice ID, Order ID text - NOW BLACK */
+.card .transaction-id,
+.card .invoice-id,
+.card .order-id,
+.card .id-display,
+.card .number-display,
+.card .transaction-number,
+.card .invoice-number,
+.card .order-number,
+.card .reference-number,
+.card .code-display,
+.card .id-text,
+.card .number-text {
+    color: #1E293B !important;
+    font-weight: 700 !important;
+    font-size: 1.2rem !important;
+    text-shadow: none !important;
+    letter-spacing: 0.5px !important;
+    text-align: center !important;
+}
+
+/* Card titles and headings - NOW BLACK */
+.card.bg-primary .card-title,
+.card.bg-info .card-title,
+.card.bg-blue .card-title,
+.card.bg-primary .card-header,
+.card.bg-info .card-header,
+.card.bg-blue .card-header,
+.card.bg-primary h1,
+.card.bg-info h1,
+.card.bg-blue h1,
+.card.bg-primary h2,
+.card.bg-info h2,
+.card.bg-blue h2,
+.card.bg-primary h3,
+.card.bg-info h3,
+.card.bg-blue h3,
+.card.bg-primary h4,
+.card.bg-info h4,
+.card.bg-blue h4,
+.card.bg-primary h5,
+.card.bg-info h5,
+.card.bg-blue h5,
+.card.bg-primary h6,
+.card.bg-info h6,
+.card.bg-blue h6 {
+    color: #1E293B !important;
+    font-weight: 600 !important;
+    text-shadow: none !important;
+}
+
+/* Card body text - NOW BLACK */
+.card.bg-primary .card-body,
+.card.bg-info .card-body,
+.card.bg-blue .card-body,
+.card.bg-primary p,
+.card.bg-info p,
+.card.bg-blue p,
+.card.bg-primary span,
+.card.bg-info span,
+.card.bg-blue span,
+.card.bg-primary div,
+.card.bg-info div,
+.card.bg-blue div {
+    color: #1E293B !important;
+    text-shadow: none !important;
+}
+
+/* ===== BLUE BACKGROUND ELEMENT FIXES ===== */
+
+/* Any element with blue background classes - CHANGE TO WHITE */
+.bg-primary,
+.bg-info,
+.bg-blue,
+[class*="bg-primary"],
+[class*="bg-info"],
+[class*="bg-blue"],
+[class*="bg-blue-"],
+[class*="bg-primary-"],
+[class*="bg-info-"] {
+    background: #FFFFFF !important;
+    color: #1E293B !important;
+    border: 2px solid #3B82F6 !important;
+}
+
+.bg-primary *,
+.bg-info *,
+.bg-blue *,
+[class*="bg-primary"] *,
+[class*="bg-info"] *,
+[class*="bg-blue"] *,
+[class*="bg-blue-"] *,
+[class*="bg-primary-"] *,
+[class*="bg-info-"] * {
+    color: #1E293B !important;
+}
+
+/* ===== PAYMENT INFORMATION CARD FIXES ===== */
+
+/* Cards with colored borders (not blue backgrounds) */
+.card.border-success,
+.card.border-info,
+.card.border-primary,
+.card.border-warning,
+.card.border-danger {
+    color: #1E293B !important;
+    background: #FFFFFF !important;
+}
+
+.card.border-success *,
+.card.border-info *,
+.card.border-primary *,
+.card.border-warning *,
+.card.border-danger * {
+    color: #1E293B !important;
+}
+
+/* ===== BUTTON FIXES IN BLUE CARDS ===== */
+
+/* Buttons inside blue background cards - NOW WITH BLUE BACKGROUND */
+.card.bg-primary .btn,
+.card.bg-info .btn,
+.card.bg-blue .btn,
+.card[style*="background-color: #3B82F6"] .btn,
+.card[style*="background-color: #2563EB"] .btn,
+.card[style*="background-color: #1E40AF"] .btn,
+.card[style*="background: #3B82F6"] .btn,
+.card[style*="background: #2563EB"] .btn,
+.card[style*="background: #1E40AF"] .btn {
+    background: #3B82F6 !important;
+    color: #FFFFFF !important;
+    border: 2px solid #3B82F6 !important;
+    font-weight: 600 !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+.card.bg-primary .btn:hover,
+.card.bg-info .btn:hover,
+.card.bg-blue .btn:hover,
+.card[style*="background-color: #3B82F6"] .btn:hover,
+.card[style*="background-color: #2563EB"] .btn:hover,
+.card[style*="background-color: #1E40AF"] .btn:hover,
+.card[style*="background: #3B82F6"] .btn:hover,
+.card[style*="background: #2563EB"] .btn:hover,
+.card[style*="background: #1E40AF"] .btn:hover {
+    background: #2563EB !important;
+    color: #FFFFFF !important;
+    border-color: #2563EB !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* ===== ICON FIXES IN BLUE CARDS ===== */
+
+/* Icons in blue cards - NOW BLACK */
+.card.bg-primary i,
+.card.bg-info i,
+.card.bg-blue i,
+.card.bg-primary .icon,
+.card.bg-info .icon,
+.card.bg-blue .icon,
+.card[style*="background-color: #3B82F6"] i,
+.card[style*="background-color: #2563EB"] i,
+.card[style*="background-color: #1E40AF"] i {
+    color: #3B82F6 !important;
+    text-shadow: none !important;
+}
+
+/* ===== RESPONSIVE FIXES ===== */
+
+@media (max-width: 768px) {
+    /* Mobile-specific fixes for blue cards */
+    .card.bg-primary,
+    .card.bg-info,
+    .card.bg-blue {
+        font-size: 0.9rem !important;
+        background: #FFFFFF !important;
+        color: #1E293B !important;
+    }
+    
+    .card .transaction-id,
+    .card .invoice-id,
+    .card .order-id {
+        font-size: 1rem !important;
+        color: #1E293B !important;
+    }
+}
+
+/* ===== FORCE OVERRIDE ANY CONFLICTING STYLES ===== */
+
+/* Ultimate override for any remaining blue card issues - CHANGE TO WHITE */
+*[style*="background-color: #3B82F6"],
+*[style*="background-color: #2563EB"],
+*[style*="background-color: #1E40AF"],
+*[style*="background: #3B82F6"],
+*[style*="background: #2563EB"],
+*[style*="background: #1E40AF"] {
+    background: #FFFFFF !important;
+    color: #1E293B !important;
+    border: 2px solid #3B82F6 !important;
+}
+
+*[style*="background-color: #3B82F6"] *,
+*[style*="background-color: #2563EB"] *,
+*[style*="background-color: #1E40AF"] *,
+*[style*="background: #3B82F6"] *,
+*[style*="background: #2563EB"] *,
+*[style*="background: #1E40AF"] * {
+    color: #1E293B !important;
+}
+
+/* ===== DEBUG STYLES (REMOVE IN PRODUCTION) ===== */
+
+/* Add visible border for debugging blue cards - NOW WHITE WITH BLUE BORDER */
+.card.bg-primary,
+.card.bg-info,
+.card.bg-blue {
+    border: 2px solid #3B82F6 !important;
+    background: #FFFFFF !important;
+}

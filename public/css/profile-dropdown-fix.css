@@ -1,0 +1,363 @@
+/* ===== PROFILE DROPDOWN FIX ===== */
+/* CSS untuk memperbaiki profile dropdown yang tidak muncul */
+
+/* Force profile dropdown to be visible when active */
+.navbar-nav .nav-profile .dropdown-menu {
+    display: none !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    position: absolute !important;
+    top: 100% !important;
+    right: 0 !important;
+    left: auto !important;
+    z-index: 9999 !important;
+    min-width: 200px !important;
+    background: #FFFFFF !important;
+    border: 1px solid #E2E8F0 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15) !important;
+    padding: 0.5rem 0 !important;
+    margin: 0 !important;
+}
+
+/* Show dropdown when parent is active */
+.navbar-nav .nav-profile.show .dropdown-menu,
+.navbar-nav .nav-profile .dropdown-menu.show {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Profile dropdown item styling */
+.navbar-nav .nav-profile .dropdown-menu .dropdown-item {
+    display: block !important;
+    width: 100% !important;
+    padding: 0.75rem 1.5rem !important;
+    clear: both !important;
+    font-weight: 400 !important;
+    color: #1E293B !important;
+    text-align: inherit !important;
+    white-space: nowrap !important;
+    background-color: transparent !important;
+    border: 0 !important;
+    text-decoration: none !important;
+    transition: all 0.2s ease !important;
+}
+
+.navbar-nav .nav-profile .dropdown-menu .dropdown-item:hover {
+    color: #3B82F6 !important;
+    background-color: #F1F5F9 !important;
+    transform: translateX(5px) !important;
+}
+
+.navbar-nav .nav-profile .dropdown-menu .dropdown-item:active {
+    color: #FFFFFF !important;
+    background-color: #3B82F6 !important;
+}
+
+/* Profile dropdown form styling */
+.navbar-nav .nav-profile .dropdown-menu form {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Profile dropdown button styling */
+.navbar-nav .nav-profile .dropdown-menu button[type="submit"] {
+    width: 100% !important;
+    text-align: left !important;
+    background: none !important;
+    border: none !important;
+    padding: 0.75rem 1.5rem !important;
+    color: #1E293B !important;
+    font-size: 0.875rem !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+}
+
+.navbar-nav .nav-profile .dropdown-menu button[type="submit"]:hover {
+    color: #3B82F6 !important;
+    background-color: #F1F5F9 !important;
+    transform: translateX(5px) !important;
+}
+
+.navbar-nav .nav-profile .dropdown-menu button[type="submit"]:active {
+    color: #FFFFFF !important;
+    background-color: #3B82F6 !important;
+}
+
+/* Profile dropdown icon styling */
+.navbar-nav .nav-profile .dropdown-menu .ti-power-off {
+    color: #3B82F6 !important;
+    font-size: 1rem !important;
+    margin-right: 0.5rem !important;
+}
+
+/* Force navbar profile positioning */
+.navbar-nav .nav-profile {
+    position: relative !important;
+}
+
+.navbar-nav .nav-profile .nav-link {
+    cursor: pointer !important;
+    user-select: none !important;
+}
+
+/* Override any conflicting Bootstrap styles */
+.navbar-nav .nav-profile .dropdown-menu.dropdown-menu-right {
+    right: 0 !important;
+    left: auto !important;
+}
+
+/* Ensure dropdown is above other elements */
+.navbar-nav .nav-profile .dropdown-menu {
+    z-index: 99999 !important;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .navbar-nav .nav-profile .dropdown-menu {
+        position: fixed !important;
+        top: 60px !important;
+        right: 10px !important;
+        left: 10px !important;
+        width: auto !important;
+        min-width: 200px !important;
+        max-width: 300px !important;
+    }
+}
+
+/* Animation for dropdown appearance */
+.navbar-nav .nav-profile .dropdown-menu.show {
+    animation: dropdownFadeIn 0.3s ease-out !important;
+}
+
+@keyframes dropdownFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Focus states for accessibility */
+.navbar-nav .nav-profile .dropdown-menu .dropdown-item:focus,
+.navbar-nav .nav-profile .dropdown-menu button[type="submit"]:focus {
+    outline: 2px solid #3B82F6 !important;
+    outline-offset: 2px !important;
+}
+
+/* Hover effect for profile link */
+.navbar-nav .nav-profile .nav-link:hover {
+    background-color: rgba(59, 130, 246, 0.1) !important;
+    border-radius: 8px !important;
+}
+
+/* Active state for profile link */
+.navbar-nav .nav-profile .nav-link.active {
+    background-color: rgba(59, 130, 246, 0.15) !important;
+    border-radius: 8px !important;
+}
+
+/* Profile image hover effect */
+.navbar-nav .nav-profile .nav-link img {
+    transition: all 0.2s ease !important;
+}
+
+.navbar-nav .nav-profile .nav-link:hover img {
+    transform: scale(1.1) !important;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3) !important;
+}
+
+/* Username styling */
+.navbar-nav .nav-profile .nav-link .text-gray {
+    color: #6B7280 !important;
+    font-weight: 500 !important;
+    transition: color 0.2s ease !important;
+}
+
+.navbar-nav .nav-profile .nav-link:hover .text-gray {
+    color: #3B82F6 !important;
+}
+
+/* Ensure dropdown arrow is visible */
+.navbar-nav .nav-profile .nav-link::after {
+    display: inline-block !important;
+    margin-left: 0.5rem !important;
+    vertical-align: middle !important;
+    content: "▼" !important;
+    font-size: 0.75rem !important;
+    color: #6B7280 !important;
+    transition: all 0.2s ease !important;
+}
+
+.navbar-nav .nav-profile .nav-link:hover::after {
+    color: #3B82F6 !important;
+    transform: translateY(2px) !important;
+}
+
+/* Dropdown menu arrow */
+.navbar-nav .nav-profile .dropdown-menu::before {
+    content: "" !important;
+    position: absolute !important;
+    top: -8px !important;
+    right: 20px !important;
+    width: 0 !important;
+    height: 0 !important;
+    border-left: 8px solid transparent !important;
+    border-right: 8px solid transparent !important;
+    border-bottom: 8px solid #FFFFFF !important;
+    z-index: 1 !important;
+}
+
+.navbar-nav .nav-profile .dropdown-menu::after {
+    content: "" !important;
+    position: absolute !important;
+    top: -9px !important;
+    right: 20px !important;
+    width: 0 !important;
+    height: 0 !important;
+    border-left: 8px solid transparent !important;
+    border-right: 8px solid transparent !important;
+    border-bottom: 8px solid #E2E8F0 !important;
+    z-index: 0 !important;
+}
+
+/* ===== AGGRESSIVE OVERRIDES ===== */
+/* Override any template CSS that might hide the dropdown */
+
+/* Force dropdown to be visible when show class is present */
+.nav-profile.show .dropdown-menu,
+.nav-profile .dropdown-menu.show,
+.nav-profile.show .navbar-dropdown,
+.nav-profile .navbar-dropdown.show {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    position: absolute !important;
+    top: 100% !important;
+    right: 0 !important;
+    left: auto !important;
+    z-index: 99999 !important;
+}
+
+/* Override any display: none from template */
+.nav-profile .dropdown-menu[style*="display: none"]:not(.show),
+.nav-profile .navbar-dropdown[style*="display: none"]:not(.show) {
+    display: none !important;
+}
+
+.nav-profile .dropdown-menu[style*="display: block"],
+.nav-profile .navbar-dropdown[style*="display: block"] {
+    display: block !important;
+}
+
+/* Override any visibility: hidden from template */
+.nav-profile .dropdown-menu[style*="visibility: hidden"]:not(.show),
+.nav-profile .navbar-dropdown[style*="visibility: hidden"]:not(.show) {
+    visibility: hidden !important;
+}
+
+.nav-profile .dropdown-menu[style*="visibility: visible"],
+.nav-profile .navbar-dropdown[style*="visibility: visible"] {
+    visibility: visible !important;
+}
+
+/* Override any opacity: 0 from template */
+.nav-profile .dropdown-menu[style*="opacity: 0"]:not(.show),
+.nav-profile .navbar-dropdown[style*="opacity: 0"]:not(.show) {
+    opacity: 0 !important;
+}
+
+.nav-profile .dropdown-menu[style*="opacity: 1"],
+.nav-profile .navbar-dropdown[style*="opacity: 1"] {
+    opacity: 1 !important;
+}
+
+/* Force positioning */
+.nav-profile {
+    position: relative !important;
+}
+
+.nav-profile .dropdown-menu,
+.nav-profile .navbar-dropdown {
+    position: absolute !important;
+    top: 100% !important;
+    right: 0 !important;
+    left: auto !important;
+    margin-top: 0.5rem !important;
+}
+
+/* Ensure dropdown content is visible */
+.nav-profile .dropdown-menu *,
+.nav-profile .navbar-dropdown * {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* Override any conflicting z-index */
+.nav-profile .dropdown-menu,
+.nav-profile .navbar-dropdown {
+    z-index: 99999 !important;
+}
+
+/* Force button visibility in dropdown */
+.nav-profile .dropdown-menu button,
+.nav-profile .navbar-dropdown button {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    text-align: left !important;
+    background: none !important;
+    border: none !important;
+    padding: 0.75rem 1.5rem !important;
+    color: #1E293B !important;
+    font-size: 0.875rem !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+}
+
+/* Force form visibility in dropdown */
+.nav-profile .dropdown-menu form,
+.nav-profile .navbar-dropdown form {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Force icon visibility in dropdown */
+.nav-profile .dropdown-menu i,
+.nav-profile .navbar-dropdown i {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    color: #3B82F6 !important;
+    font-size: 1rem !important;
+    margin-right: 0.5rem !important;
+}
+
+/* Debug styles - remove in production */
+.nav-profile .dropdown-menu,
+.nav-profile .navbar-dropdown {
+    border: 3px solid red !important;
+    background: yellow !important;
+}
+
+.nav-profile.show .dropdown-menu,
+.nav-profile.show .navbar-dropdown {
+    border: 3px solid green !important;
+    background: lightgreen !important;
+}

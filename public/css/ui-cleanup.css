@@ -1,0 +1,356 @@
+
+:root{
+  --brand:#2563eb;
+  --brand-600:#1d4ed8;
+  --bg:#f6f7fb;
+  --text:#1f2937;
+  --muted:#6b7280;
+  --card:#ffffff;
+  --border:#e5e7eb;
+  --success:#16a34a;
+  --danger:#dc2626;
+  --warning:#d97706;
+}
+
+html{scroll-behavior:smooth}
+body{background-color:var(--bg); color:var(--text); -webkit-font-smoothing:antialiased;}
+
+.container-fluid{padding: 1.25rem 1.25rem;}
+
+.page-header{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:1rem; margin-bottom:1rem; padding: .5rem 0;
+}
+.page-header h1{font-size:1.25rem; font-weight:700; margin:0;}
+.page-header .breadcrumbs{font-size:.875rem; color:var(--muted)}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:14px;
+  box-shadow:0 4px 14px rgba(0,0,0,.05);
+}
+.card .card-title{font-weight:600;}
+
+.table-responsive{
+  border-radius:12px; border:1px solid var(--border); background:#fff;
+}
+.table{margin-bottom:0;}
+.table thead th{
+  background:#f3f4f6; color:#374151; font-weight:600; border-bottom:1px solid var(--border);
+}
+.table tbody tr:hover{background:#fafafa}
+.table td, .table th{vertical-align:middle}
+
+.form-control, .form-select{
+  border-radius:10px; border:1px solid var(--border);
+}
+.form-control:focus, .form-select:focus{
+  border-color:var(--brand); box-shadow:0 0 0 .2rem rgba(37,99,235,.15);
+}
+
+.btn{border-radius:10px; font-weight:600}
+.btn-primary{background:var(--brand); border-color:var(--brand)}
+.btn-primary:hover{background:var(--brand-600); border-color:var(--brand-600)}
+.btn-outline-primary{color:var(--brand); border-color:var(--brand)}
+.btn-outline-primary:hover{background:var(--brand); color:#fff}
+
+.alert{border-radius:12px}
+.badge{border-radius:999px; padding:.35rem .6rem}
+
+.navbar {box-shadow: 0 2px 10px rgba(0,0,0,.05);}
+.navbar .navbar-menu-wrapper{gap:.75rem}
+.nav-profile img{border:2px solid #fff}
+
+.sidebar{
+  border-right:1px solid var(--border);
+}
+.sidebar .nav .nav-item .nav-link{border-radius:10px; margin:.2rem .4rem; padding:.6rem .8rem}
+.sidebar .nav .nav-item .nav-link.active,
+.sidebar .nav .nav-item .nav-link:hover{background:#eef2ff; color:#1e40af}
+
+.dropdown-menu{
+  border-radius:12px; border:1px solid var(--border); box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+
+.table-actions .btn{padding:.35rem .5rem}
+
+@media (max-width: 991px){
+  .page-header{flex-direction:column; align-items:flex-start}
+  .container-fluid{padding: .75rem}
+}
+
+
+/* Transactions Table Styling */
+.transactions-table .table-responsive{
+  border-radius: 12px;
+  overflow:hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.transactions-table .table thead th{
+  background-color: #f9fafb;
+  font-weight:600;
+  color:#374151;
+  border-bottom:2px solid var(--border);
+}
+.transactions-table .table tbody tr:hover{
+  background:#f3f4f6;
+  transition:background-color .2s ease;
+}
+.transactions-table .alert-info{
+  background-color:#dbeafe;
+  border-color:#bfdbfe;
+  color:#1e3a8a;
+}
+.transactions-table .card{border:none; box-shadow:0 4px 12px rgba(0,0,0,.08); border-radius:14px;}
+.transactions-table .card:hover{transform:translateY(-2px); box-shadow:0 6px 14px rgba(0,0,0,.1);}
+
+
+/* === Override Logout Button Style === */
+.dropdown-menu .dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  color: #2563eb; /* biru brand */
+  background: #fff;
+  border-radius: 8px;
+  font-weight: 500;
+}
+.dropdown-menu .dropdown-item:hover {
+  background-color: #eff6ff; /* biru muda lembut */
+  color: #1d4ed8;
+}
+
+
+/* === Sidebar Refinements === */
+.sidebar {
+  background: #fff;
+  border-right: 1px solid var(--border);
+}
+.sidebar .nav {
+  padding: .5rem .25rem 1rem .25rem;
+}
+.sidebar .nav .nav-item {
+  margin: .1rem 0;
+}
+.sidebar .nav .nav-item .nav-link{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .55rem .75rem;
+  border-radius: 10px;
+  color: #374151;
+  transition: background .15s ease, color .15s ease, box-shadow .15s ease;
+}
+.sidebar .nav .nav-item .nav-link:hover{
+  background: #f3f6ff;
+  color: var(--brand-600);
+}
+.sidebar .nav .nav-item .nav-link .menu-title{
+  font-weight: 600;
+}
+/* Active state */
+.sidebar .nav .nav-item .nav-link.active{
+  color: var(--brand-600);
+  background: #eef2ff;
+  box-shadow: inset 2px 0 0 0 var(--brand);
+}
+/* Caret / arrow */
+.sidebar .nav .nav-item .menu-arrow{
+  margin-left: auto;
+  transition: transform .2s ease;
+}
+.sidebar .nav .nav-item .nav-link[aria-expanded="true"] .menu-arrow,
+.sidebar .nav .nav-item .nav-link.collapsed[aria-expanded="true"] .menu-arrow,
+.sidebar .nav .nav-item .nav-link[aria-controls].show .menu-arrow{
+  transform: rotate(90deg);
+}
+
+/* Submenu */
+.sidebar .nav .sub-menu{
+  padding: .25rem 0 .5rem 0;
+  margin: .15rem 0 .35rem 0;
+  border-left: 2px solid #e5e7eb;
+}
+.sidebar .nav .sub-menu .nav-item{
+  margin: 0;
+}
+.sidebar .nav .sub-menu .nav-link{
+  padding: .45rem .75rem .45rem 1.5rem;
+  border-radius: 8px;
+  font-size: .92rem;
+  color: #4b5563;
+}
+.sidebar .nav .sub-menu .nav-link:hover{
+  background: #f8fafc;
+  color: var(--brand-600);
+}
+.sidebar .nav .sub-menu .nav-link.active{
+  background: #eef2ff;
+  color: var(--brand-600);
+  box-shadow: inset 2px 0 0 0 var(--brand);
+}
+
+/* Responsive: compact sidebar on small screens */
+@media (max-width: 991px){
+  .sidebar .nav .nav-link{ padding: .5rem .65rem; }
+  .sidebar .nav .sub-menu .nav-link{ padding-left: 1.2rem; }
+}
+
+
+/* === Sidebar Submenu Color Adjustments === */
+.sidebar .nav .sub-menu .nav-link {
+  color: #374151; /* teks gelap agar jelas */
+}
+.sidebar .nav .sub-menu .nav-link:hover {
+  background: #f3f6ff; /* hover biru lembut */
+  color: #2563eb;      /* teks biru brand */
+}
+.sidebar .nav .sub-menu .nav-link.active {
+  background: #e0e7ff; /* biru sangat lembut */
+  color: #1d4ed8;      /* teks biru lebih gelap */
+  font-weight: 600;
+}
+
+
+/* === Sidebar Submenu Tone Adjustments === */
+.sidebar .nav .sub-menu .nav-link{
+  color: #374151;                 /* teks lebih gelap untuk keterbacaan */
+}
+.sidebar .nav .sub-menu .nav-link:hover{
+  background: #f3f6ff;            /* hover biru lembut */
+  color: #2563eb;                 /* biru brand */
+}
+.sidebar .nav .sub-menu .nav-link.active{
+  background: #e0e7ff;            /* highlight aktif lebih jelas */
+  color: #1d4ed8;                 /* biru sedikit lebih gelap */
+  font-weight: 600;
+  box-shadow: inset 2px 0 0 0 var(--brand);
+}
+
+
+/* === FORCE OVERRIDES for theme's `.nav.sub-menu` === */
+.sidebar .nav.sub-menu{
+  background: transparent !important;
+  padding-left: 1rem !important;
+  padding-bottom: .5rem !important;
+  border-left: 2px solid #e5e7eb !important;
+}
+/* remove big bullets */
+.sidebar .nav.sub-menu .nav-item::before{
+  display: none !important;
+}
+/* link styles inside .nav.sub-menu */
+.sidebar .nav.sub-menu .nav-item .nav-link{
+  color: #374151 !important;
+  padding: .5rem .75rem .5rem 1rem !important;
+  border-radius: 8px !important;
+}
+.sidebar .nav.sub-menu .nav-item .nav-link:hover{
+  background: #f3f6ff !important;
+  color: #2563eb !important;
+}
+.sidebar .nav.sub-menu .nav-item .nav-link.active{
+  background: #e0e7ff !important;
+  color: #1d4ed8 !important;
+  font-weight: 600 !important;
+  box-shadow: inset 2px 0 0 0 var(--brand) !important;
+}
+
+
+/* === TOP-LEVEL SIDEBAR ITEM OVERRIDES (force beat theme) === */
+.sidebar .nav:not(.sub-menu) > .nav-item > .nav-link{
+  background: transparent !important;
+  color: #374151 !important;
+  border-radius: 10px !important;
+}
+.sidebar .nav:not(.sub-menu) > .nav-item > .nav-link:hover{
+  background: #f3f6ff !important;
+  color: #1d4ed8 !important;
+}
+.sidebar .nav:not(.sub-menu) > .nav-item > .nav-link[aria-expanded="true"],
+.sidebar .nav:not(.sub-menu) > .nav-item > .nav-link.active{
+  background: #e0e7ff !important;
+  color: #1d4ed8 !important;
+  box-shadow: inset 3px 0 0 0 var(--brand) !important;
+}
+
+/* Remove theme's strong blue block on expanded parents */
+.sidebar .nav:not(.sub-menu) > .nav-item:hover > .nav-link,
+.sidebar .nav:not(.sub-menu) > .nav-item:hover[aria-expanded="true"],
+.sidebar .nav:not(.sub-menu) > .nav-item > .nav-link[aria-expanded="true"]{
+  background: #e0e7ff !important;
+  color: #1d4ed8 !important;
+}
+
+/* === SUBMENU: ensure no grey pills and keep light tones === */
+.sidebar .nav.sub-menu{
+  background: transparent !important;
+  padding-left: 1rem !important;
+  padding-bottom: .5rem !important;
+  border-left: 2px solid #e5e7eb !important;
+}
+.sidebar .nav.sub-menu .nav-item::before{ display:none !important; }
+
+.sidebar .nav.sub-menu .nav-item .nav-link{
+  background: transparent !important;
+  color: #374151 !important;
+  padding: .45rem .75rem .45rem 1rem !important;
+  border-radius: 8px !important;
+}
+.sidebar .nav.sub-menu .nav-item .nav-link:hover{
+  background: #f3f6ff !important;
+  color: #2563eb !important;
+}
+.sidebar .nav.sub-menu .nav-item .nav-link.active{
+  background: #e0e7ff !important;
+  color: #1d4ed8 !important;
+  font-weight: 600 !important;
+  box-shadow: inset 2px 0 0 0 var(--brand) !important;
+}
+
+
+/* === EXTRA FORCE FIXES === */
+/* kill any pseudo bullets in submenu */
+.sidebar .nav.sub-menu .nav-item .nav-link::before { display:none !important; }
+.sidebar .nav.sub-menu .nav-item::before { display:none !important; }
+
+/* disabled submenu style: keep flat */
+.sidebar .nav.sub-menu .nav-item .nav-link.disabled,
+.sidebar .nav.sub-menu .nav-item .nav-link[aria-disabled="true"]{
+  background: transparent !important;
+  color: #9ca3af !important;
+  opacity: .8 !important;
+}
+
+/* parent link pills: unify radius and remove gradients */
+.sidebar .nav:not(.sub-menu) > .nav-item > .nav-link {
+  border-radius: 10px !important;
+  background-image: none !important;
+}
+.sidebar .nav:not(.sub-menu) > .nav-item > .nav-link[aria-expanded="true"],
+.sidebar .nav:not(.sub-menu) > .nav-item.active > .nav-link {
+  border-radius: 10px !important;
+  background-image: none !important;
+}
+
+/* ensure title and icons follow link color */
+.sidebar .nav .nav-item .nav-link .menu-title,
+.sidebar .nav .nav-item .nav-link i { color: inherit !important; }
+
+.icon{stroke-linecap:round;stroke-linejoin:round}
+
+
+/* === Lite Modal (Card) === */
+.lite-modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;z-index:1050;opacity:0;pointer-events:none;transition:opacity .2s ease}
+.lite-modal.show{opacity:1;pointer-events:auto}
+.lite-modal-backdrop{position:absolute;inset:0;background:rgba(17,24,39,.45);backdrop-filter:saturate(120%) blur(2px)}
+.lite-modal-card{position:relative;width:min(560px, 92vw);background:#fff;border:1px solid var(--border);border-radius:16px;box-shadow:0 24px 60px rgba(0,0,0,.18);overflow:hidden}
+.lite-modal-header{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;border-bottom:1px solid var(--border)}
+.lite-modal-header h5{margin:0;font-weight:700}
+.lite-modal-close{background:transparent;border:0;font-size:24px;line-height:1;opacity:.6}
+.lite-modal-close:hover{opacity:1}
+.lite-modal-body{padding:16px;color:#374151}
+.lite-modal-footer{display:flex;gap:.5rem;justify-content:flex-end;padding:12px 16px;border-top:1px solid var(--border)}
+.success-card strong{font-weight:700}
+.modal-open-lite{overflow:hidden}

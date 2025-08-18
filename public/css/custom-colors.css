@@ -1,0 +1,326 @@
+/* ===== CUSTOM COLOR SCHEME - SELLORA BLUE & GREY ===== */
+:root {
+  /* Main Blue Palette */
+  --primary-blue: #3B82F6;            /* Main blue like Sellora */
+  --primary-blue-light: #DBEAFE;      /* Light blue 100 */
+  --primary-blue-lighter: #EFF6FF;    /* Extra light blue 50 */
+  --primary-blue-dark: #2563EB;       /* Darker blue for hover */
+  --primary-blue-darker: #1E40AF;     /* Deep blue for text/icons */
+
+  /* Accent & Secondary */
+  --accent-blue: #60A5FA;             /* Blue accent */
+  --secondary-blue: #1D4ED8;          /* Dark blue secondary */
+  --secondary-blue-light: #DBEAFE;    /* Pale blue background */
+
+  /* Status Colors */
+  --success: #22C55E;
+  --warning: #F59E0B;
+  --danger: #EF4444;
+  --info: #38BDF8;
+
+  /* Neutral & Gray */
+  --neutral-white: #FFFFFF;
+  --neutral-gray-50: #F8FAFC;
+  --neutral-gray-100: #F1F5F9;
+  --neutral-gray-200: #E2E8F0;
+  --neutral-gray-300: #CBD5E1;
+  --neutral-gray-400: #94A3B8;
+  --neutral-gray-500: #64748B;
+  --neutral-gray-600: #475569;
+  --neutral-gray-700: #334155;
+  --neutral-gray-800: #1E293B;
+  --neutral-gray-900: #0F172A;
+
+  /* Backgrounds */
+  --bg-primary: var(--neutral-white); /* White background like Sellora */
+  --bg-secondary: var(--neutral-gray-50); /* Very light gray */
+  --bg-tertiary: var(--primary-blue-lighter);/* Light blue background */
+
+  /* Borders */
+  --border-primary: #E2E8F0;          /* Gray 200 */
+  --border-secondary: #CBD5E1;        /* Gray 300 */
+  --border-light: #F1F5F9;            /* Very light border */
+
+  /* Text */
+  --text-primary: #1E293B;            /* Dark gray like Sellora text */
+  --text-secondary: #475569;          /* Gray 600 */
+  --text-muted: #64748B;              /* Gray 500 */
+  --text-light: #94A3B8;              /* Gray 400 */
+}
+
+/* ===== GLOBAL BACKGROUND ===== */
+body {
+  background: var(--bg-primary) !important;
+  color: var(--text-primary) !important;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background: var(--neutral-white) !important;
+  color: var(--text-primary) !important;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.12) !important;
+  border-bottom: 1px solid var(--border-primary) !important;
+}
+.navbar-brand, .navbar-nav .nav-link { color: var(--text-primary) !important; }
+.navbar-nav .nav-link:hover { color: var(--primary-blue) !important; }
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+  background: var(--bg-primary) !important;
+  border-right: 1px solid var(--border-primary) !important;
+}
+.sidebar .nav-item .nav-link {
+  color: var(--text-primary) !important;
+  border-radius: 8px;
+  margin: 0 0.5rem;
+  padding: 0.75rem 1rem;
+  transition: all 0.2s;
+}
+.sidebar .nav-item .nav-link.active, .sidebar .nav-item .nav-link:hover {
+  background: var(--primary-blue) !important;
+  color: var(--neutral-white) !important;
+}
+.sidebar .nav-item .nav-link i { color: var(--primary-blue) !important; }
+.sidebar .nav-item .nav-link.active i { color: var(--neutral-white) !important; }
+
+/* ===== CARD ===== */
+.card {
+  background: var(--neutral-white) !important;
+  border: 1px solid var(--border-primary) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 2px 12px 0 rgba(59, 130, 246, 0.10) !important;
+}
+.card-header {
+  background: var(--bg-secondary) !important;
+  border-bottom: 1px solid var(--border-primary) !important;
+}
+.card-title { color: var(--text-primary) !important; }
+
+/* ===== BUTTONS ===== */
+.btn-primary {
+  background: var(--primary-blue) !important;
+  border: none !important;
+  color: var(--neutral-white) !important;
+  border-radius: 8px !important;
+}
+.btn-primary:hover, .btn-primary:focus {
+  background: var(--primary-blue-dark) !important;
+  color: var(--neutral-white) !important;
+}
+.btn-secondary {
+  background: var(--neutral-gray-200) !important;
+  border: none !important;
+  color: var(--text-primary) !important;
+  border-radius: 8px !important;
+}
+.btn-secondary:hover, .btn-secondary:focus {
+  background: var(--neutral-gray-300) !important;
+  color: var(--text-primary) !important;
+}
+.btn-info { background: var(--accent-blue) !important; border: none !important; color: var(--neutral-white) !important; }
+.btn-success { background: var(--success) !important; border: none !important; }
+.btn-warning { background: var(--warning) !important; border: none !important; }
+.btn-danger { background: var(--danger) !important; border: none !important; }
+
+/* ===== TABLE ===== */
+.table thead th {
+  background: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+  border-bottom: 2px solid var(--border-primary) !important;
+}
+.table-striped tbody tr:nth-of-type(odd) { background: var(--bg-tertiary) !important; }
+.table-hover tbody tr:hover { background: var(--bg-secondary) !important; }
+
+/* ===== FORM ===== */
+.form-control {
+  border-radius: 8px !important;
+  border: 1.5px solid var(--border-secondary) !important;
+  background: var(--neutral-white) !important;
+  color: var(--text-primary) !important;
+}
+.form-control:focus {
+  border-color: var(--primary-blue) !important;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.15) !important;
+  background: var(--neutral-white) !important;
+}
+
+/* ===== BADGE ===== */
+.badge-primary { background: var(--primary-blue) !important; color: var(--neutral-white) !important; }
+.badge-info { background: var(--accent-blue) !important; color: var(--neutral-white) !important; }
+.badge-success { background: var(--success) !important; color: var(--neutral-white) !important; }
+.badge-warning { background: var(--warning) !important; color: var(--neutral-white) !important; }
+.badge-danger { background: var(--danger) !important; color: var(--neutral-white) !important; }
+
+/* ===== ALERT ===== */
+.alert-primary { background: var(--bg-tertiary) !important; color: var(--text-primary) !important; border-left: 4px solid var(--primary-blue); }
+.alert-info { background: var(--accent-blue) !important; color: var(--neutral-white) !important; }
+.alert-success { background: var(--success) !important; color: var(--neutral-white) !important; }
+.alert-warning { background: var(--warning) !important; color: var(--neutral-white) !important; }
+.alert-danger { background: var(--danger) !important; color: var(--neutral-white) !important; }
+
+/* ===== PAGINATION ===== */
+.page-item.active .page-link { background: var(--primary-blue) !important; border-color: var(--primary-blue) !important; color: var(--neutral-white) !important; }
+.page-link { color: var(--primary-blue) !important; }
+.page-link:hover { color: var(--primary-blue-dark) !important; }
+
+/* ===== DROPDOWN ===== */
+.dropdown-menu {
+  border: 1.5px solid var(--border-primary) !important;
+  background: var(--neutral-white) !important;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.10) !important;
+}
+.dropdown-item:hover { background: var(--bg-secondary) !important; color: var(--text-primary) !important; }
+
+/* ===== MODAL ===== */
+.modal-header { background: var(--bg-secondary) !important; border-bottom: 1.5px solid var(--border-primary) !important; }
+.modal-title { color: var(--text-primary) !important; }
+
+/* ===== UTILITIES ===== */
+.bg-blue-light { background: var(--bg-secondary) !important; }
+.bg-blue-lighter { background: var(--bg-primary) !important; }
+.text-blue-primary { color: var(--text-primary) !important; }
+.text-blue-secondary { color: var(--primary-blue) !important; }
+.border-blue { border-color: var(--primary-blue) !important; }
+
+/* Map Bootstrap helpers to theme palette */
+.text-primary { color: var(--primary-blue) !important; }
+a.text-primary:hover { color: var(--primary-blue-dark) !important; }
+.bg-primary { background: var(--primary-blue) !important; color: var(--neutral-white) !important; }
+.border-primary { border-color: var(--primary-blue) !important; }
+
+/* ===== HOVER & FOCUS ===== */
+.card:hover { box-shadow: 0 6px 24px 0 rgba(59, 130, 246, 0.18) !important; }
+.btn:focus, .form-control:focus, .nav-link:focus { outline: none !important; box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.18) !important; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .sidebar { background: var(--primary-blue) !important; }
+  .sidebar .nav-item .nav-link { color: #fff !important; }
+  .sidebar .nav-item .nav-link:hover { background: var(--accent-blue) !important; color: #fff !important; }
+}
+
+/* ===== SIDEBAR OVERRIDES: REMOVE DEFAULT BLUE/PURPLE FROM TEMPLATE ===== */
+/* Active state on parent li > a */
+.sidebar .nav .nav-item.active > .nav-link {
+  background: var(--primary-blue) !important;
+  color: var(--neutral-white) !important;
+}
+
+/* Hover state for top-level items */
+.sidebar .nav:not(.sub-menu) > .nav-item:hover > .nav-link,
+.sidebar .nav:not(.sub-menu) > .nav-item:hover[aria-expanded="true"] {
+  background: var(--primary-blue) !important;
+  color: var(--neutral-white) !important;
+}
+
+/* Expanded parent item should use theme colors, not template blue */
+.sidebar .nav:not(.sub-menu) > .nav-item > .nav-link[aria-expanded="true"] {
+  background: var(--primary-blue) !important;
+  color: var(--neutral-white) !important;
+}
+.sidebar .nav:not(.sub-menu) > .nav-item > .nav-link[aria-expanded="true"] i,
+.sidebar .nav:not(.sub-menu) > .nav-item > .nav-link[aria-expanded="true"] .menu-title,
+.sidebar .nav:not(.sub-menu) > .nav-item > .nav-link[aria-expanded="true"] .menu-arrow {
+  color: var(--neutral-white) !important;
+}
+
+/* Remove solid blue background on active li container */
+.sidebar .nav:not(.sub-menu) > .nav-item.active {
+  background: transparent !important;
+}
+
+/* Ensure icon/title colors on hover/active are readable */
+.sidebar .nav .nav-item.active > .nav-link i,
+.sidebar .nav .nav-item.active > .nav-link .menu-title,
+.sidebar .nav .nav-item.active > .nav-link .menu-arrow,
+.sidebar .nav .nav-item:hover > .nav-link i,
+.sidebar .nav .nav-item:hover > .nav-link .menu-title,
+.sidebar .nav .nav-item:hover > .nav-link .menu-arrow {
+  color: var(--neutral-white) !important;
+}
+
+/* Sidebar icon-only mode tooltip/menu title background */
+@media (min-width: 992px) {
+  .sidebar-icon-only .sidebar .nav .nav-item .nav-link .menu-title,
+  .sidebar-icon-only .sidebar .nav .nav-item.hover-open .nav-link .menu-title,
+  .sidebar-icon-only .sidebar .nav .nav-item.hover-open .nav-link:hover .menu-title {
+    background: var(--primary-blue) !important;
+    color: var(--neutral-white) !important;
+  }
+}
+
+/* Dark sidebar variant parity */
+.sidebar-dark .sidebar .nav .nav-item.active > .nav-link,
+.sidebar-dark .sidebar .nav:not(.sub-menu) > .nav-item:hover > .nav-link {
+  background: var(--primary-blue) !important;
+  color: var(--neutral-white) !important;
+}
+
+/* ===== SUB-MENU STYLING: REMOVE BLUE FROM COLLAPSIBLE SUB-MENUS ===== */
+/* Sub-menu items background - remove default blue */
+.sidebar .nav.sub-menu .nav-item .nav-link {
+  background: transparent !important;
+  color: var(--text-primary) !important;
+}
+
+/* Sub-menu items hover state */
+.sidebar .nav.sub-menu .nav-item .nav-link:hover {
+  background: var(--bg-secondary) !important;
+  color: var(--text-primary) !important;
+}
+
+/* Sub-menu items active state */
+.sidebar .nav.sub-menu .nav-item .nav-link.active {
+  background: var(--bg-secondary) !important;
+  color: var(--primary-blue) !important;
+}
+
+/* Sub-menu container background when expanded */
+.sidebar .nav.sub-menu {
+  background: var(--bg-primary) !important;
+}
+
+/* Ensure sub-menu items don't inherit parent's blue background */
+.sidebar .nav.sub-menu .nav-item {
+  background: transparent !important;
+}
+
+/* Override any remaining default blue from template */
+.sidebar .nav.sub-menu .nav-item .nav-link,
+.sidebar .nav.sub-menu .nav-item .nav-link:hover,
+.sidebar .nav .nav-item .collapse .nav.sub-menu .nav-item .nav-link {
+  background: transparent !important;
+}
+
+/* When sub-menu is expanded, ensure proper styling */
+.sidebar .nav .nav-item .collapse.show .nav.sub-menu .nav-item .nav-link {
+  background: transparent !important;
+  color: var(--text-primary) !important;
+}
+
+/* Hover effect for sub-menu items */
+.sidebar .nav .nav-item .collapse.show .nav.sub-menu .nav-item .nav-link:hover {
+  background: var(--bg-secondary) !important;
+  color: var(--primary-blue) !important;
+}
+
+/* ===== FORCE ALL SUB-MENUS CLOSED BY DEFAULT ===== */
+/* Ensure all sub-menu collapses are closed unless explicitly opened */
+.sidebar .nav .nav-item .collapse:not(.show) {
+  display: none !important;
+}
+
+/* Override Bootstrap's display: block for .collapse.show */
+.sidebar .nav .nav-item .collapse.show {
+  display: block !important;
+}
+
+/* Force close any sub-menu that might be open from previous state */
+.sidebar .nav .nav-item .collapse {
+  display: none !important;
+}
+
+/* Only show when explicitly opened via JavaScript */
+.sidebar .nav .nav-item .collapse.show {
+  display: block !important;
+}

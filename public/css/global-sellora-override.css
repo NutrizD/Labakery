@@ -1,0 +1,183 @@
+/* ===== GLOBAL SELLORA OVERRIDE ===== */
+/* This file ensures ALL elements use the Sellora blue theme */
+
+/* ===== FORCE OVERRIDE ALL REMAINING COLORS ===== */
+
+/* Any remaining orange/amber colors */
+[style*="#fb923c"],
+[style*="#f97316"],
+[style*="#fbbf24"],
+[style*="#f59e0b"],
+[style*="#fef3c7"],
+[style*="#ffedd5"],
+[style*="#fff7ed"],
+[style*="#fed7aa"],
+[style*="#fde68a"],
+[style*="#78350f"],
+[style*="#b45309"],
+[style*="#a16207"] {
+    color: #3B82F6 !important;
+    background-color: #3B82F6 !important;
+    border-color: #3B82F6 !important;
+}
+
+/* Override any remaining gradient backgrounds */
+[style*="linear-gradient(135deg, #ff6b35"],
+[style*="linear-gradient(135deg, #f7931e"],
+[style*="linear-gradient(90deg, #fb923c"],
+[style*="linear-gradient(90deg, #fbbf24"] {
+    background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%) !important;
+}
+
+/* ===== SPECIFIC ELEMENT OVERRIDES ===== */
+
+/* Progress bars */
+.progress-bar {
+    background-color: #3B82F6 !important;
+}
+
+/* Loading spinners */
+.spinner-border.text-primary {
+    color: #3B82F6 !important;
+}
+
+/* Icons */
+.text-primary i,
+.text-primary .icon {
+    color: #3B82F6 !important;
+}
+
+/* Links */
+a:not(.btn):not(.nav-link) {
+    color: #3B82F6 !important;
+}
+
+a:not(.btn):not(.nav-link):hover {
+    color: #2563EB !important;
+}
+
+/* ===== FORM ELEMENTS ===== */
+
+/* Checkboxes and radios */
+.form-check-input:checked {
+    background-color: #3B82F6 !important;
+    border-color: #3B82F6 !important;
+}
+
+/* Select dropdowns */
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+    background-color: #3B82F6 !important;
+}
+
+/* ===== COMPONENT OVERRIDES ===== */
+
+/* Tabs */
+.nav-tabs .nav-link.active {
+    color: #3B82F6 !important;
+    border-color: #3B82F6 #3B82F6 #fff !important;
+}
+
+.nav-tabs .nav-link:hover {
+    border-color: #DBEAFE #DBEAFE #3B82F6 !important;
+}
+
+/* Accordion */
+.accordion-button:not(.collapsed) {
+    background-color: #EFF6FF !important;
+    color: #1E293B !important;
+}
+
+.accordion-button:focus {
+    border-color: #3B82F6 !important;
+    box-shadow: 0 0 0 0.25rem rgba(59, 130, 246, 0.25) !important;
+}
+
+/* ===== UTILITY CLASSES ===== */
+
+/* Text utilities */
+.text-primary,
+.text-primary * {
+    color: #3B82F6 !important;
+}
+
+/* Background utilities */
+.bg-primary,
+.bg-primary * {
+    background-color: #3B82F6 !important;
+    color: #FFFFFF !important;
+}
+
+/* Border utilities */
+.border-primary {
+    border-color: #3B82F6 !important;
+}
+
+/* ===== HOVER STATES ===== */
+
+/* Button hover effects */
+.btn:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 8px rgba(59, 130, 246, 0.2) !important;
+}
+
+/* Card hover effects */
+.card:hover {
+    box-shadow: 0 6px 24px rgba(59, 130, 246, 0.15) !important;
+}
+
+/* ===== FOCUS STATES ===== */
+
+/* Focus outlines */
+.btn:focus,
+.form-control:focus,
+.nav-link:focus {
+    box-shadow: 0 0 0 0.25rem rgba(59, 130, 246, 0.25) !important;
+}
+
+/* ===== RESPONSIVE OVERRIDES ===== */
+
+@media (max-width: 768px) {
+    /* Mobile specific overrides */
+    .btn-primary {
+        background-color: #3B82F6 !important;
+        border-color: #3B82F6 !important;
+    }
+    
+    .sidebar {
+        background-color: #3B82F6 !important;
+    }
+}
+
+/* ===== IMPORTANT OVERRIDES ===== */
+
+/* Force override any remaining template colors */
+*[class*="primary"] {
+    color: #3B82F6 !important;
+    background-color: #3B82F6 !important;
+    border-color: #3B82F6 !important;
+}
+
+/* Override any inline styles with !important */
+[style*="color:"] {
+    color: #3B82F6 !important;
+}
+
+[style*="background-color:"] {
+    background-color: #3B82F6 !important;
+}
+
+[style*="border-color:"] {
+    border-color: #3B82F6 !important;
+}
+
+/* ===== FINAL FALLBACK ===== */
+
+/* Ensure all primary elements use Sellora blue */
+.primary,
+.primary *,
+[class*="primary"],
+[class*="primary"] * {
+    color: #3B82F6 !important;
+    background-color: #3B82F6 !important;
+    border-color: #3B82F6 !important;
+}

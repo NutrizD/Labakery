@@ -1,0 +1,456 @@
+/* ===== SELLORA FINAL THEME ===== */
+/* File CSS final yang menggabungkan semua styling Sellora */
+
+/* ===== ROOT VARIABLES ===== */
+:root {
+    /* Primary Colors - Sellora Blue Theme */
+    --primary-blue: #3B82F6;
+    --primary-blue-dark: #2563EB;
+    --primary-blue-darker: #1E40AF;
+    --primary-blue-light: #60A5FA;
+    --primary-blue-lighter: #93C5FD;
+    
+    /* Secondary Colors */
+    --secondary-gray: #6B7280;
+    --secondary-gray-dark: #4B5563;
+    --secondary-gray-light: #9CA3AF;
+    
+    /* Background Colors */
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #F8FAFC;
+    --bg-tertiary: #F1F5F9;
+    --bg-dark: #1E293B;
+    
+    /* Text Colors */
+    --text-primary: #1E293B;
+    --text-secondary: #475569;
+    --text-muted: #64748B;
+    --text-light: #FFFFFF;
+    
+    /* Border Colors */
+    --border-primary: #E2E8F0;
+    --border-secondary: #CBD5E1;
+    --border-light: #F1F5F9;
+    
+    /* Status Colors */
+    --success: #059669;
+    --warning: #D97706;
+    --danger: #DC2626;
+    --info: #3B82F6;
+}
+
+/* ===== GLOBAL STYLES ===== */
+body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--bg-secondary);
+}
+
+/* ===== NAVBAR ENHANCEMENT ===== */
+.navbar {
+    background: var(--bg-primary) !important;
+    border-bottom: 2px solid var(--border-primary) !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05) !important;
+}
+
+.navbar-brand {
+    font-weight: 700 !important;
+    color: var(--primary-blue) !important;
+}
+
+/* ===== SIDEBAR ENHANCEMENT ===== */
+.sidebar {
+    background: var(--bg-dark) !important;
+    border-right: 1px solid var(--border-primary) !important;
+}
+
+.sidebar .nav-link {
+    color: var(--text-light) !important;
+    transition: all 0.3s ease !important;
+}
+
+.sidebar .nav-link:hover {
+    background: var(--primary-blue) !important;
+    color: var(--text-light) !important;
+    transform: translateX(5px) !important;
+}
+
+.sidebar .nav-link.active {
+    background: var(--primary-blue) !important;
+    color: var(--text-light) !important;
+    border-left: 4px solid var(--primary-blue-light) !important;
+}
+
+/* ===== CARD ENHANCEMENT ===== */
+.card {
+    border: 1px solid var(--border-primary) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05) !important;
+    transition: all 0.3s ease !important;
+    background: var(--bg-primary) !important;
+}
+
+.card:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.15) !important;
+    border-color: var(--primary-blue) !important;
+}
+
+.card-header {
+    background: var(--bg-secondary) !important;
+    border-bottom: 1px solid var(--border-primary) !important;
+    border-radius: 12px 12px 0 0 !important;
+}
+
+.card-title {
+    color: var(--text-primary) !important;
+    font-weight: 600 !important;
+}
+
+/* ===== BUTTON ENHANCEMENT ===== */
+.btn {
+    border-radius: 8px !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+    border: 2px solid transparent !important;
+}
+
+.btn-primary {
+    background: var(--primary-blue) !important;
+    border-color: var(--primary-blue) !important;
+    color: var(--text-light) !important;
+}
+
+.btn-primary:hover {
+    background: var(--primary-blue-dark) !important;
+    border-color: var(--primary-blue-dark) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3) !important;
+}
+
+.btn-secondary {
+    background: var(--secondary-gray) !important;
+    border-color: var(--secondary-gray) !important;
+    color: var(--text-light) !important;
+}
+
+.btn-success {
+    background: var(--success) !important;
+    border-color: var(--success) !important;
+    color: var(--text-light) !important;
+}
+
+.btn-warning {
+    background: var(--warning) !important;
+    border-color: var(--warning) !important;
+    color: var(--text-light) !important;
+}
+
+.btn-danger {
+    background: var(--danger) !important;
+    border-color: var(--danger) !important;
+    color: var(--text-light) !important;
+}
+
+/* ===== FORM ENHANCEMENT ===== */
+.form-control {
+    border: 2px solid var(--border-primary) !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
+    background: var(--bg-primary) !important;
+    color: var(--text-primary) !important;
+}
+
+.form-control:focus {
+    border-color: var(--primary-blue) !important;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+    outline: none !important;
+}
+
+.form-label {
+    color: var(--text-primary) !important;
+    font-weight: 500 !important;
+    margin-bottom: 0.5rem !important;
+}
+
+/* ===== TABLE ENHANCEMENT ===== */
+.table {
+    background: var(--bg-primary) !important;
+    border-radius: 12px !important;
+    overflow: hidden !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05) !important;
+}
+
+.table thead th {
+    background: var(--bg-secondary) !important;
+    color: var(--text-primary) !important;
+    font-weight: 600 !important;
+    border-bottom: 2px solid var(--border-primary) !important;
+    padding: 1rem !important;
+}
+
+.table tbody td {
+    padding: 1rem !important;
+    border-bottom: 1px solid var(--border-light) !important;
+    color: var(--text-secondary) !important;
+}
+
+.table tbody tr:hover {
+    background: var(--bg-tertiary) !important;
+    transform: scale(1.01) !important;
+    transition: all 0.2s ease !important;
+}
+
+/* ===== ALERT ENHANCEMENT ===== */
+.alert {
+    border-radius: 12px !important;
+    border: none !important;
+    padding: 1rem 1.5rem !important;
+    font-weight: 500 !important;
+}
+
+.alert-success {
+    background: rgba(5, 150, 105, 0.1) !important;
+    color: var(--success) !important;
+    border-left: 4px solid var(--success) !important;
+}
+
+.alert-warning {
+    background: rgba(217, 119, 6, 0.1) !important;
+    color: var(--warning) !important;
+    border-left: 4px solid var(--warning) !important;
+}
+
+.alert-danger {
+    background: rgba(220, 38, 38, 0.1) !important;
+    color: var(--danger) !important;
+    border-left: 4px solid var(--danger) !important;
+}
+
+.alert-info {
+    background: rgba(59, 130, 246, 0.1) !important;
+    color: var(--info) !important;
+    border-left: 4px solid var(--info) !important;
+}
+
+/* ===== BADGE ENHANCEMENT ===== */
+.badge {
+    border-radius: 20px !important;
+    font-weight: 500 !important;
+    padding: 0.5rem 1rem !important;
+}
+
+.badge-primary {
+    background: var(--primary-blue) !important;
+    color: var(--text-light) !important;
+}
+
+.badge-success {
+    background: var(--success) !important;
+    color: var(--text-light) !important;
+}
+
+.badge-warning {
+    background: var(--warning) !important;
+    color: var(--text-light) !important;
+}
+
+.badge-danger {
+    background: var(--danger) !important;
+    color: var(--text-light) !important;
+}
+
+/* ===== MODAL ENHANCEMENT ===== */
+.modal-content {
+    border-radius: 16px !important;
+    border: none !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2) !important;
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--border-primary) !important;
+    border-radius: 16px 16px 0 0 !important;
+    background: var(--bg-secondary) !important;
+}
+
+.modal-title {
+    color: var(--text-primary) !important;
+    font-weight: 600 !important;
+}
+
+.modal-body {
+    padding: 2rem !important;
+}
+
+.modal-footer {
+    border-top: 1px solid var(--border-primary) !important;
+    border-radius: 0 0 16px 16px !important;
+    background: var(--bg-secondary) !important;
+}
+
+/* ===== DROPDOWN ENHANCEMENT ===== */
+.dropdown-menu {
+    border-radius: 12px !important;
+    border: 1px solid var(--border-primary) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+    background: var(--bg-primary) !important;
+}
+
+.dropdown-item {
+    color: var(--text-secondary) !important;
+    transition: all 0.2s ease !important;
+    padding: 0.75rem 1.5rem !important;
+}
+
+.dropdown-item:hover {
+    background: var(--bg-tertiary) !important;
+    color: var(--text-primary) !important;
+    transform: translateX(5px) !important;
+}
+
+/* ===== PAGINATION ENHANCEMENT ===== */
+.pagination .page-link {
+    border: 1px solid var(--border-primary) !important;
+    color: var(--text-secondary) !important;
+    margin: 0 2px !important;
+    border-radius: 8px !important;
+    transition: all 0.3s ease !important;
+}
+
+.pagination .page-link:hover {
+    background: var(--primary-blue) !important;
+    color: var(--text-light) !important;
+    border-color: var(--primary-blue) !important;
+    transform: translateY(-1px) !important;
+}
+
+.pagination .page-item.active .page-link {
+    background: var(--primary-blue) !important;
+    border-color: var(--primary-blue) !important;
+    color: var(--text-light) !important;
+}
+
+/* ===== PROGRESS BAR ENHANCEMENT ===== */
+.progress {
+    height: 12px !important;
+    border-radius: 6px !important;
+    background: var(--bg-tertiary) !important;
+    overflow: hidden !important;
+}
+
+.progress-bar {
+    background: var(--primary-blue) !important;
+    border-radius: 6px !important;
+    transition: width 0.6s ease !important;
+}
+
+/* ===== TOOLTIP ENHANCEMENT ===== */
+.tooltip {
+    font-size: 0.875rem !important;
+}
+
+.tooltip-inner {
+    background: var(--bg-dark) !important;
+    color: var(--text-light) !important;
+    border-radius: 8px !important;
+    padding: 0.5rem 1rem !important;
+}
+
+/* ===== UTILITY CLASSES ===== */
+.text-primary { color: var(--primary-blue) !important; }
+.text-secondary { color: var(--secondary-gray) !important; }
+.text-success { color: var(--success) !important; }
+.text-warning { color: var(--warning) !important; }
+.text-danger { color: var(--danger) !important; }
+.text-info { color: var(--info) !important; }
+
+.bg-primary { background: var(--primary-blue) !important; }
+.bg-secondary { background: var(--secondary-gray) !important; }
+.bg-success { background: var(--success) !important; }
+.bg-warning { background: var(--warning) !important; }
+.bg-danger { background: var(--danger) !important; }
+.bg-info { background: var(--info) !important; }
+
+.border-primary { border-color: var(--primary-blue) !important; }
+.border-secondary { border-color: var(--secondary-gray) !important; }
+.border-success { border-color: var(--success) !important; }
+.border-warning { border-color: var(--warning) !important; }
+.border-danger { border-color: var(--danger) !important; }
+.border-info { border-color: var(--info) !important; }
+
+/* ===== RESPONSIVE ENHANCEMENT ===== */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 1rem !important;
+    }
+    
+    .table-responsive {
+        border-radius: 12px !important;
+    }
+    
+    .btn {
+        width: 100% !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .modal-dialog {
+        margin: 1rem !important;
+    }
+}
+
+/* ===== ANIMATION ENHANCEMENT ===== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-out !important;
+}
+
+.slide-in {
+    animation: slideIn 0.5s ease-out !important;
+}
+
+.scale-in {
+    animation: scaleIn 0.4s ease-out !important;
+}
+
+/* ===== FOCUS ENHANCEMENT ===== */
+*:focus {
+    outline: 2px solid var(--primary-blue) !important;
+    outline-offset: 2px !important;
+}
+
+/* ===== HOVER ENHANCEMENT ===== */
+.btn:hover,
+.card:hover,
+.nav-link:hover {
+    cursor: pointer !important;
+}
+
+/* ===== PRINT ENHANCEMENT ===== */
+@media print {
+    .navbar,
+    .sidebar,
+    .btn,
+    .modal {
+        display: none !important;
+    }
+    
+    .card {
+        border: 1px solid #000 !important;
+        box-shadow: none !important;
+    }
+}

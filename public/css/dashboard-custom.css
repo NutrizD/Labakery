@@ -1,0 +1,328 @@
+/* ===== LOGO FIXES ===== */
+.navbar-brand {
+    display: flex !important;
+    align-items: center !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.navbar-brand img {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    max-height: 40px !important;
+    width: auto !important;
+}
+
+.brand-logo {
+    display: flex !important;
+    align-items: center !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.brand-logo img {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    max-height: 40px !important;
+    width: auto !important;
+}
+
+/* Hide mini logo on desktop to prevent duplication */
+.brand-logo-mini {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+.brand-logo-mini img {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+/* Show mini logo only on mobile */
+@media (max-width: 991px) {
+    .brand-logo {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+    }
+
+    .brand-logo img {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+    }
+
+    .brand-logo-mini {
+        display: flex !important;
+        align-items: center !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .brand-logo-mini img {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        max-height: 30px !important;
+        width: auto !important;
+    }
+}
+
+/* ===== SIDEBAR RESTORATION ===== */
+/* Ensure sidebar is visible and positioned correctly */
+.sidebar {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: fixed !important;
+    left: 0 !important;
+    top: 60px !important;
+    width: 235px !important;
+    height: calc(100vh - 60px) !important;
+    z-index: 1000 !important;
+    background: #fff !important;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1) !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+}
+
+.main-panel {
+    margin-left: 235px !important;
+    width: calc(100% - 235px) !important;
+}
+
+/* ===== MODERN SIDEBAR DESIGN WITHOUT ICONS ===== */
+.sidebar .nav-item .nav-link {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 16px 24px !important;
+    color: #555 !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+    background: transparent !important;
+    border: none !important;
+    border-left: 3px solid transparent !important;
+    font-weight: 500 !important;
+    font-size: 14px !important;
+    position: relative !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    z-index: 1001 !important;
+}
+
+/* Force all sidebar elements to be clickable */
+.sidebar .nav-item {
+    pointer-events: auto !important;
+    margin-bottom: 2px !important;
+}
+
+.sidebar .nav {
+    pointer-events: auto !important;
+    padding: 16px 0 !important;
+}
+
+.sidebar a,
+.sidebar a * {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+}
+
+/* Menu title styling */
+.sidebar .nav-item .nav-link .menu-title {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: #555 !important;
+    transition: color 0.3s ease !important;
+    flex: 1 !important;
+    pointer-events: auto !important;
+}
+
+/* Hover effects */
+.sidebar .nav-item .nav-link:hover {
+    background-color: #f8f9fa !important;
+    color: #333 !important;
+    border-left-color: #3B82F6 !important;
+    transform: translateX(4px) !important;
+}
+
+.sidebar .nav-item .nav-link:hover .menu-title {
+    color: #333 !important;
+}
+
+/* Active state - modern styling */
+.sidebar .nav-item.active .nav-link {
+    background: #3B82F6 !important;
+    color: #fff !important;
+    border-left-color: #3B82F6 !important;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3) !important;
+}
+
+.sidebar .nav-item.active .nav-link .menu-title {
+    color: #fff !important;
+    font-weight: 600 !important;
+}
+
+/* Menu arrow styling */
+.sidebar .menu-arrow {
+    font-size: 12px !important;
+    color: #999 !important;
+    transition: transform 0.3s ease !important;
+    margin-left: 8px !important;
+}
+
+.sidebar .nav-item[aria-expanded="true"] .menu-arrow {
+    transform: rotate(90deg) !important;
+    color: #3B82F6 !important;
+}
+
+.sidebar .nav-item.active .menu-arrow {
+    color: #fff !important;
+}
+
+/* Mobile responsive */
+@media (max-width: 991px) {
+    .sidebar {
+        transform: translateX(-100%) !important;
+    }
+    .sidebar.active {
+        transform: translateX(0) !important;
+    }
+    .main-panel {
+        margin-left: 0 !important;
+        width: 100% !important;
+    }
+}
+
+/* ===== AGGRESSIVE SUBMENU FIX ===== */
+/* Force all submenu containers to be visible when they have show class */
+.sidebar .collapse.show,
+.sidebar #products-menu.show,
+.sidebar #employees-menu.show,
+.sidebar #users-menu.show {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    position: static !important;
+    transform: none !important;
+}
+
+/* Force submenu to show when parent has aria-expanded="true" */
+.sidebar .nav-item[aria-expanded="true"] .collapse,
+.sidebar .nav-item[aria-expanded="true"] #products-menu,
+.sidebar .nav-item[aria-expanded="true"] #employees-menu,
+.sidebar .nav-item[aria-expanded="true"] #users-menu {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    position: static !important;
+    transform: none !important;
+}
+
+/* Override any Bootstrap or template CSS */
+.sidebar .collapse {
+    display: none !important;
+}
+
+.sidebar .collapse.show {
+    display: block !important;
+}
+
+/* Force submenu items to be visible */
+.sidebar .sub-menu {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    position: static !important;
+    transform: none !important;
+    background-color: #f8f9fa !important;
+    border-left: 3px solid #e9ecef !important;
+    margin-left: 0 !important;
+    padding-left: 0 !important;
+}
+
+/* Ensure submenu items are clickable and visible */
+.sidebar .sub-menu .nav-item {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    overflow: visible !important;
+    position: static !important;
+    transform: none !important;
+}
+
+.sidebar .sub-menu .nav-item .nav-link {
+    display: flex !important;
+    align-items: center !important;
+    padding: 12px 24px 12px 48px !important;
+    font-size: 13px !important;
+    color: #666 !important;
+    text-decoration: none !important;
+    background: transparent !important;
+    border: none !important;
+    font-weight: 400 !important;
+    position: relative !important;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    z-index: 1002 !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.sidebar .sub-menu .nav-item .nav-link::before {
+    content: '•' !important;
+    position: absolute !important;
+    left: 32px !important;
+    color: #3B82F6 !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.sidebar .sub-menu .nav-item .nav-link:hover {
+    background-color: #e9ecef !important;
+    color: #333 !important;
+    transform: translateX(4px) !important;
+}
+
+.sidebar .sub-menu .nav-item .nav-link:hover::before {
+    color: #3B82F6 !important;
+}
+
+/* Override any template CSS that might hide elements */
+.sidebar .nav-item .collapse {
+    display: none !important;
+}
+
+.sidebar .nav-item .collapse.show {
+    display: block !important;
+}
+
+/* Force visibility for specific submenu containers */
+.sidebar .nav-item .collapse#products-menu.show,
+.sidebar .nav-item .collapse#employees-menu.show,
+.sidebar .nav-item .collapse#users-menu.show {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    position: static !important;
+    transform: none !important;
+}

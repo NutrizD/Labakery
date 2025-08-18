@@ -1,0 +1,527 @@
+/* ===== DISPLAY FIXES CSS ===== */
+/* CSS untuk memperbaiki tampilan yang aneh */
+
+/* ===== GLOBAL DISPLAY FIXES ===== */
+
+/* Ensure proper box-sizing */
+* {
+    box-sizing: border-box !important;
+}
+
+/* Fix body display */
+body {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    background: #F8FAFC !important;
+    color: #1E293B !important;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Fix container display */
+.container-scroller {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    min-height: 100vh !important;
+}
+
+/* ===== NAVBAR FIXES ===== */
+
+/* Fix navbar display */
+.navbar {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 1000 !important;
+    background: #FFFFFF !important;
+    border-bottom: 1px solid #E2E8F0 !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05) !important;
+    padding: 0.5rem 0 !important;
+    height: auto !important;
+    min-height: 60px !important;
+}
+
+/* Fix navbar brand */
+.navbar-brand {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.navbar-brand img {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    max-height: 40px !important;
+    width: auto !important;
+}
+
+/* Fix navbar menu wrapper */
+.navbar-menu-wrapper {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    flex: 1 !important;
+}
+
+/* Fix navbar nav */
+.navbar-nav {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+}
+
+/* Fix navbar nav item */
+.navbar-nav .nav-item {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Fix navbar nav link */
+.navbar-nav .nav-link {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    align-items: center !important;
+    padding: 0.5rem 1rem !important;
+    color: #6B7280 !important;
+    text-decoration: none !important;
+    transition: all 0.2s ease !important;
+    cursor: pointer !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #3B82F6 !important;
+    background-color: rgba(59, 130, 246, 0.1) !important;
+    border-radius: 8px !important;
+}
+
+/* Fix profile image */
+.navbar-nav .nav-link img {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    margin-left: 0.5rem !important;
+}
+
+/* Fix username text */
+.navbar-nav .nav-link .text-gray {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    color: #6B7280 !important;
+    font-weight: 500 !important;
+    margin-right: 0.5rem !important;
+}
+
+/* ===== SIDEBAR FIXES ===== */
+
+/* Fix sidebar display */
+.sidebar {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: fixed !important;
+    top: 60px !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    width: 250px !important;
+    background: #1E293B !important;
+    border-right: 1px solid #334155 !important;
+    z-index: 999 !important;
+    overflow-y: auto !important;
+}
+
+/* Fix sidebar nav */
+.sidebar .nav {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin: 0 !important;
+    padding: 1rem 0 !important;
+    list-style: none !important;
+}
+
+/* Fix sidebar nav item */
+.sidebar .nav .nav-item {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Fix sidebar nav link */
+.sidebar .nav .nav-link {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    padding: 0.75rem 1.5rem !important;
+    color: #E2E8F0 !important;
+    text-decoration: none !important;
+    transition: all 0.2s ease !important;
+    border-left: 4px solid transparent !important;
+}
+
+.sidebar .nav .nav-link:hover {
+    background-color: rgba(59, 130, 246, 0.1) !important;
+    color: #FFFFFF !important;
+    border-left-color: #3B82F6 !important;
+}
+
+.sidebar .nav .nav-link.active {
+    background-color: #3B82F6 !important;
+    color: #FFFFFF !important;
+    border-left-color: #3B82F6 !important;
+}
+
+/* Fix sidebar menu title */
+.sidebar .nav .nav-link .menu-title {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    font-weight: 500 !important;
+    font-size: 0.875rem !important;
+}
+
+/* Fix sidebar sub-menu */
+.sidebar .nav .sub-menu {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+    background: rgba(0, 0, 0, 0.1) !important;
+}
+
+.sidebar .nav .sub-menu .nav-link {
+    padding-left: 3rem !important;
+    font-size: 0.8rem !important;
+}
+
+/* ===== MAIN CONTENT FIXES ===== */
+
+/* Fix main panel */
+.main-panel {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    margin-left: 250px !important;
+    margin-top: 60px !important;
+    min-height: calc(100vh - 60px) !important;
+    background: #F8FAFC !important;
+}
+
+/* Fix content wrapper */
+.content-wrapper {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    padding: 2rem !important;
+    min-height: calc(100vh - 120px) !important;
+}
+
+/* ===== CARD FIXES ===== */
+
+/* Fix card display */
+.card {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    background: #FFFFFF !important;
+    border: 1px solid #E2E8F0 !important;
+    border-radius: 12px !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05) !important;
+    margin-bottom: 1.5rem !important;
+    overflow: hidden !important;
+}
+
+/* Fix card header */
+.card-header {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    background: #F8FAFC !important;
+    border-bottom: 1px solid #E2E8F0 !important;
+    padding: 1rem 1.5rem !important;
+}
+
+/* Fix card title */
+.card-title {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    color: #1E293B !important;
+    font-weight: 600 !important;
+    font-size: 1.125rem !important;
+    margin: 0 !important;
+}
+
+/* Fix card body */
+.card-body {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    padding: 1.5rem !important;
+}
+
+/* ===== BUTTON FIXES ===== */
+
+/* Fix button display */
+.btn {
+    display: inline-block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    padding: 0.5rem 1rem !important;
+    font-size: 0.875rem !important;
+    font-weight: 500 !important;
+    text-align: center !important;
+    text-decoration: none !important;
+    border: 1px solid transparent !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    line-height: 1.5 !important;
+}
+
+/* Fix button variants */
+.btn-primary {
+    background: #3B82F6 !important;
+    border-color: #3B82F6 !important;
+    color: #FFFFFF !important;
+}
+
+.btn-primary:hover {
+    background: #2563EB !important;
+    border-color: #2563EB !important;
+    transform: translateY(-1px) !important;
+}
+
+.btn-secondary {
+    background: #6B7280 !important;
+    border-color: #6B7280 !important;
+    color: #FFFFFF !important;
+}
+
+.btn-success {
+    background: #059669 !important;
+    border-color: #059669 !important;
+    color: #FFFFFF !important;
+}
+
+.btn-danger {
+    background: #DC2626 !important;
+    border-color: #DC2626 !important;
+    color: #FFFFFF !important;
+}
+
+/* ===== FORM FIXES ===== */
+
+/* Fix form control display */
+.form-control {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    padding: 0.5rem 0.75rem !important;
+    font-size: 0.875rem !important;
+    line-height: 1.5 !important;
+    color: #1E293B !important;
+    background: #FFFFFF !important;
+    border: 1px solid #D1D5DB !important;
+    border-radius: 6px !important;
+    transition: all 0.2s ease !important;
+}
+
+.form-control:focus {
+    outline: none !important;
+    border-color: #3B82F6 !important;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+}
+
+/* Fix form label */
+.form-label {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    color: #374151 !important;
+    font-weight: 500 !important;
+    margin-bottom: 0.5rem !important;
+}
+
+/* ===== TABLE FIXES ===== */
+
+/* Fix table display */
+.table {
+    display: table !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    background: #FFFFFF !important;
+    border-collapse: collapse !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+}
+
+/* Fix table header */
+.table thead {
+    display: table-header-group !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    background: #F8FAFC !important;
+}
+
+.table thead th {
+    display: table-cell !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    padding: 0.75rem !important;
+    text-align: left !important;
+    font-weight: 600 !important;
+    color: #1E293B !important;
+    border-bottom: 2px solid #E2E8F0 !important;
+}
+
+/* Fix table body */
+.table tbody {
+    display: table-row-group !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.table tbody tr {
+    display: table-row !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transition: background-color 0.2s ease !important;
+}
+
+.table tbody tr:hover {
+    background: #F1F5F9 !important;
+}
+
+.table tbody td {
+    display: table-cell !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    padding: 0.75rem !important;
+    color: #374151 !important;
+    border-bottom: 1px solid #F1F5F9 !important;
+}
+
+/* ===== FOOTER FIXES ===== */
+
+/* Fix footer display */
+.footer {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    background: #FFFFFF !important;
+    border-top: 1px solid #E2E8F0 !important;
+    padding: 1rem 2rem !important;
+    text-align: center !important;
+    color: #6B7280 !important;
+    font-size: 0.875rem !important;
+}
+
+/* ===== RESPONSIVE FIXES ===== */
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%) !important;
+        transition: transform 0.3s ease !important;
+    }
+    
+    .sidebar.show {
+        transform: translateX(0) !important;
+    }
+    
+    .main-panel {
+        margin-left: 0 !important;
+    }
+    
+    .navbar-menu-wrapper {
+        justify-content: center !important;
+    }
+    
+    .navbar-nav .nav-link .text-gray {
+        display: none !important;
+    }
+}
+
+/* ===== UTILITY FIXES ===== */
+
+/* Fix text colors */
+.text-primary { color: #3B82F6 !important; }
+.text-secondary { color: #6B7280 !important; }
+.text-success { color: #059669 !important; }
+.text-danger { color: #DC2626 !important; }
+.text-warning { color: #D97706 !important; }
+.text-info { color: #3B82F6 !important; }
+
+/* Fix background colors */
+.bg-primary { background: #3B82F6 !important; }
+.bg-secondary { background: #6B7280 !important; }
+.bg-success { background: #059669 !important; }
+.bg-danger { background: #DC2626 !important; }
+.bg-warning { background: #D97706 !important; }
+.bg-info { background: #3B82F6 !important; }
+
+/* Fix spacing utilities */
+.m-0 { margin: 0 !important; }
+.m-1 { margin: 0.25rem !important; }
+.m-2 { margin: 0.5rem !important; }
+.m-3 { margin: 1rem !important; }
+.m-4 { margin: 1.5rem !important; }
+.m-5 { margin: 3rem !important; }
+
+.p-0 { padding: 0 !important; }
+.p-1 { padding: 0.25rem !important; }
+.p-2 { padding: 0.5rem !important; }
+.p-3 { padding: 1rem !important; }
+.p-4 { padding: 1.5rem !important; }
+.p-5 { padding: 3rem !important; }
+
+/* Fix display utilities */
+.d-block { display: block !important; }
+.d-inline { display: inline !important; }
+.d-inline-block { display: inline-block !important; }
+.d-flex { display: flex !important; }
+.d-none { display: none !important; }
+
+/* Fix visibility utilities */
+.visible { visibility: visible !important; }
+.invisible { visibility: hidden !important; }
+
+/* Fix opacity utilities */
+.opacity-0 { opacity: 0 !important; }
+.opacity-25 { opacity: 0.25 !important; }
+.opacity-50 { opacity: 0.5 !important; }
+.opacity-75 { opacity: 0.75 !important; }
+.opacity-100 { opacity: 1 !important; }

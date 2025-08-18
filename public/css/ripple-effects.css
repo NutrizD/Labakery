@@ -1,0 +1,199 @@
+/* ===== RIPPLE EFFECTS CSS ===== */
+/* CSS untuk ripple effects pada buttons */
+
+/* Ripple effect base */
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    transform: scale(0);
+    animation: ripple-animation 0.6s linear;
+    pointer-events: none;
+}
+
+/* Ripple animation */
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* Button position relative untuk ripple */
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Navbar scroll effect */
+.navbar-scrolled {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Mobile view adjustments */
+.mobile-view .card {
+    margin-bottom: 1rem !important;
+}
+
+.mobile-view .btn {
+    width: 100% !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.mobile-view .table-responsive {
+    border-radius: 12px !important;
+}
+
+/* Scroll to top button hover */
+.scroll-to-top:hover {
+    transform: scale(1.1) !important;
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4) !important;
+}
+
+/* Notification animations */
+.sellora-notification {
+    animation: slideInRight 0.3s ease-out;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Form validation states */
+.form-control.is-valid {
+    border-color: #059669 !important;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23059669' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e") !important;
+    background-repeat: no-repeat !important;
+    background-position: right calc(0.375em + 0.1875rem) center !important;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem) !important;
+}
+
+.form-control.is-invalid {
+    border-color: #DC2626 !important;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23DC2626'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath d='m5.8 4.6 1.4 1.4M7.2 4.6l-1.4 1.4'/%3e%3c/svg%3e") !important;
+    background-repeat: no-repeat !important;
+    background-position: right calc(0.375em + 0.1875rem) center !important;
+    background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem) !important;
+}
+
+/* Loading states */
+.btn.loading {
+    position: relative;
+    color: transparent !important;
+}
+
+.btn.loading::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    left: 50%;
+    margin-left: -8px;
+    margin-top: -8px;
+    border: 2px solid transparent;
+    border-top: 2px solid currentColor;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Focus visible for accessibility */
+.btn:focus-visible,
+.form-control:focus-visible,
+.nav-link:focus-visible {
+    outline: 2px solid #3B82F6 !important;
+    outline-offset: 2px !important;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .btn {
+        border: 2px solid currentColor !important;
+    }
+    
+    .card {
+        border: 2px solid currentColor !important;
+    }
+    
+    .form-control {
+        border: 2px solid currentColor !important;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-primary: #1E293B;
+        --bg-secondary: #0F172A;
+        --bg-tertiary: #1E293B;
+        --text-primary: #F8FAFC;
+        --text-secondary: #E2E8F0;
+        --text-muted: #CBD5E1;
+        --border-primary: #334155;
+        --border-secondary: #475569;
+        --border-light: #1E293B;
+    }
+    
+    body {
+        background-color: var(--bg-secondary);
+        color: var(--text-primary);
+    }
+    
+    .card {
+        background: var(--bg-primary) !important;
+        border-color: var(--border-primary) !important;
+    }
+    
+    .navbar {
+        background: var(--bg-primary) !important;
+        border-bottom-color: var(--border-primary) !important;
+    }
+    
+    .sidebar {
+        background: var(--bg-dark) !important;
+    }
+    
+    .form-control {
+        background: var(--bg-primary) !important;
+        color: var(--text-primary) !important;
+        border-color: var(--border-primary) !important;
+    }
+    
+    .table {
+        background: var(--bg-primary) !important;
+    }
+    
+    .table thead th {
+        background: var(--bg-secondary) !important;
+        color: var(--text-primary) !important;
+    }
+    
+    .table tbody td {
+        color: var(--text-secondary) !important;
+    }
+}
