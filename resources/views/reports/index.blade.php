@@ -53,7 +53,7 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <div class="card bg-info text-white">
+                        <div class="card bg-info text-black">
                             <div class="card-body p-3">
                                 <div class="d-flex justify-content-between">
                                     <div>

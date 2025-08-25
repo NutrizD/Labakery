@@ -247,6 +247,7 @@
                             </ul>
                         </div>
                     </li>
+                    @endif
 
                     <li class="nav-item">
                         <a class="nav-link" href="#"
@@ -258,7 +259,6 @@
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                         @csrf
                     </form>
-                    @endif
                 </ul>
             </nav>
 

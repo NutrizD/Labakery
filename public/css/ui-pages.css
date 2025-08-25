@@ -33,3 +33,15 @@ label{ font-weight: 600; color:#374151; }
 .page-header .btn{ white-space:nowrap; }
 /* Table action cell */
 .table-actions{ display:flex; gap:.4rem; flex-wrap:wrap; }
+
+/* Override agar bg-info mengalahkan tema yang memaksa .card putih */
+.card.bg-info {
+  background-color: #0dcaf0 !important; /* var(--bs-info) kalau pakai BS5 */
+  color: #fff !important;
+}
+.card.bg-info .small,
+.card.bg-info .h4,
+.card.bg-info .icon {
+  color: #fff !important;
+}
+

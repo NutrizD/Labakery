@@ -15722,9 +15722,6 @@ button.bg-success:focus,
   background-color: #429842 !important;
 }
 
-.bg-info, .settings-panel .color-tiles .tiles.info {
-}
-
 a.bg-info:hover, .settings-panel .color-tiles a.tiles.info:hover, a.bg-info:focus, .settings-panel .color-tiles a.tiles.info:focus,
 button.bg-info:hover,
 .settings-panel .color-tiles button.tiles.info:hover,

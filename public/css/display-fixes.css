@@ -457,19 +457,19 @@ body {
         transform: translateX(-100%) !important;
         transition: transform 0.3s ease !important;
     }
-    
+
     .sidebar.show {
         transform: translateX(0) !important;
     }
-    
+
     .main-panel {
         margin-left: 0 !important;
     }
-    
+
     .navbar-menu-wrapper {
         justify-content: center !important;
     }
-    
+
     .navbar-nav .nav-link .text-gray {
         display: none !important;
     }

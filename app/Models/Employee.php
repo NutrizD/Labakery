@@ -11,6 +11,8 @@ class Employee extends Model
 
     protected $fillable = [
         'user_id',
+        'full_name',
+        'gender',
         'employee_id',
         'position',
         'phone',
@@ -72,5 +74,13 @@ class Employee extends Model
     public function getFormattedHireDateAttribute()
     {
         return $this->hire_date ? $this->hire_date->format('d/m/Y') : '-';
+    }
+
+    public function getDisplayNameAttribute(): string
+    {
+        if (!empty($this->full_name)) {
+            return $this->full_name;
+        }
+        return optional($this->user)->name ?? '-';
     }
 }

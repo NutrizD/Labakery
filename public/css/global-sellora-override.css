@@ -107,6 +107,12 @@ a:not(.btn):not(.nav-link):hover {
     color: #FFFFFF !important;
 }
 
+.bg-info,
+.bg-info * {
+    background-color: #f63bed !important;
+    color: #FFFFFF !important;
+}
+
 /* Border utilities */
 .border-primary {
     border-color: #3B82F6 !important;
@@ -142,7 +148,7 @@ a:not(.btn):not(.nav-link):hover {
         background-color: #3B82F6 !important;
         border-color: #3B82F6 !important;
     }
-    
+
     .sidebar {
         background-color: #3B82F6 !important;
     }

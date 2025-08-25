@@ -6,7 +6,6 @@ use App\Models\Employee;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Str;
 
 class EmployeeController extends Controller
 {
@@ -15,22 +14,23 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        $employees = Employee::with('user')
-            ->latest()
-            ->paginate(10);
-        
+        $employees = Employee::with('user')->latest()->paginate(10);
         return view('employees.index', compact('employees'));
     }
 
     /**
      * Menampilkan form untuk membuat karyawan baru.
+     * (Tidak lagi mewajibkan pilih user; nama lengkap + gender ditambahkan)
      */
     public function create()
     {
+        // Opsional (bila suatu saat ingin menautkan ke user tertentu)
         $users = User::whereDoesntHave('employee')->get();
+
         $positions = ['Kasir', 'Admin', 'Manager', 'Staff'];
-        
-        return view('employees.create', compact('users', 'positions'));
+        $statuses  = ['active' => 'Aktif', 'inactive' => 'Nonaktif', 'terminated' => 'Diberhentikan'];
+
+        return view('employees.create', compact('users', 'positions', 'statuses'));
     }
 
     /**
@@ -38,30 +38,34 @@ class EmployeeController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'user_id' => ['required', 'exists:users,id', 'unique:employees,user_id'],
-            'position' => ['required', 'string', 'max:255'],
-            'phone' => ['nullable', 'string', 'max:20'],
-            'address' => ['nullable', 'string', 'max:500'],
-            'hire_date' => ['required', 'date'],
-            'salary' => ['nullable', 'numeric', 'min:0'],
-            'status' => ['required', 'in:active,inactive,terminated'],
-            'notes' => ['nullable', 'string', 'max:1000'],
+        $validated = $request->validate([
+            'full_name' => ['required', 'string', 'max:255'],
+            'gender'    => ['required', 'in:male,female'],
+            'user_id'   => ['nullable', 'exists:users,id', 'unique:employees,user_id'],
+            'position'  => ['nullable', 'string', 'max:255'],
+            'phone'     => ['nullable', 'string', 'max:20'],
+            'address'   => ['nullable', 'string', 'max:500'],
+            'hire_date' => ['nullable', 'date'],
+            'salary'    => ['nullable', 'numeric', 'min:0'],
+            'status'    => ['nullable', 'in:active,inactive,terminated'],
+            'notes'     => ['nullable', 'string', 'max:1000'],
         ]);
 
-        // Generate employee ID
+        // Generate employee ID sederhana
         $employeeId = 'EMP' . date('Y') . str_pad(Employee::count() + 1, 4, '0', STR_PAD_LEFT);
 
         Employee::create([
-            'user_id' => $request->user_id,
+            'full_name'   => $validated['full_name'],
+            'gender'      => $validated['gender'],
+            'user_id'     => $validated['user_id'] ?? null,
             'employee_id' => $employeeId,
-            'position' => $request->position,
-            'phone' => $request->phone,
-            'address' => $request->address,
-            'hire_date' => $request->hire_date,
-            'salary' => $request->salary,
-            'status' => $request->status,
-            'notes' => $request->notes,
+            'position'    => $validated['position'] ?? null,
+            'phone'       => $validated['phone'] ?? null,
+            'address'     => $validated['address'] ?? null,
+            'hire_date'   => $validated['hire_date'] ?? null,
+            'salary'      => $validated['salary'] ?? null,
+            'status'      => $validated['status'] ?? 'active',
+            'notes'       => $validated['notes'] ?? null,
         ]);
 
         return redirect()->route('employees.index')->with('success', 'Karyawan berhasil ditambahkan.');
@@ -82,7 +86,14 @@ class EmployeeController extends Controller
     public function edit(Employee $employee)
     {
         $positions = ['Kasir', 'Admin', 'Manager', 'Staff'];
-        return view('employees.edit', compact('employee', 'positions'));
+        $statuses  = ['active' => 'Aktif', 'inactive' => 'Nonaktif', 'terminated' => 'Diberhentikan'];
+
+        // Bila tetap ingin opsi ganti tautan ke user (opsional)
+        $users = User::whereDoesntHave('employee')
+            ->orWhere('id', $employee->user_id)
+            ->get();
+
+        return view('employees.edit', compact('employee', 'positions', 'statuses', 'users'));
     }
 
     /**
@@ -90,24 +101,30 @@ class EmployeeController extends Controller
      */
     public function update(Request $request, Employee $employee)
     {
-        $request->validate([
-            'position' => ['required', 'string', 'max:255'],
-            'phone' => ['nullable', 'string', 'max:20'],
-            'address' => ['nullable', 'string', 'max:500'],
-            'hire_date' => ['required', 'date'],
-            'salary' => ['nullable', 'numeric', 'min:0'],
-            'status' => ['required', 'in:active,inactive,terminated'],
-            'notes' => ['nullable', 'string', 'max:1000'],
+        $validated = $request->validate([
+            'full_name' => ['required', 'string', 'max:255'],
+            'gender'    => ['required', 'in:male,female'],
+            'user_id'   => ['nullable', 'exists:users,id', 'unique:employees,user_id,' . $employee->id],
+            'position'  => ['nullable', 'string', 'max:255'],
+            'phone'     => ['nullable', 'string', 'max:20'],
+            'address'   => ['nullable', 'string', 'max:500'],
+            'hire_date' => ['nullable', 'date'],
+            'salary'    => ['nullable', 'numeric', 'min:0'],
+            'status'    => ['nullable', 'in:active,inactive,terminated'],
+            'notes'     => ['nullable', 'string', 'max:1000'],
         ]);
 
         $employee->update([
-            'position' => $request->position,
-            'phone' => $request->phone,
-            'address' => $request->address,
-            'hire_date' => $request->hire_date,
-            'salary' => $request->salary,
-            'status' => $request->status,
-            'notes' => $request->notes,
+            'full_name' => $validated['full_name'],
+            'gender'    => $validated['gender'],
+            'user_id'   => $validated['user_id'] ?? null,
+            'position'  => $validated['position'] ?? null,
+            'phone'     => $validated['phone'] ?? null,
+            'address'   => $validated['address'] ?? null,
+            'hire_date' => $validated['hire_date'] ?? null,
+            'salary'    => $validated['salary'] ?? null,
+            'status'    => $validated['status'] ?? $employee->status,
+            'notes'     => $validated['notes'] ?? null,
         ]);
 
         return redirect()->route('employees.index')->with('success', 'Data karyawan berhasil diperbarui.');
@@ -123,13 +140,13 @@ class EmployeeController extends Controller
     }
 
     /**
-     * Menampilkan laporan karyawan.
+     * Laporan ringkas karyawan.
      */
     public function report()
     {
-        $totalEmployees = Employee::count();
-        $activeEmployees = Employee::active()->count();
-        $inactiveEmployees = Employee::where('status', 'inactive')->count();
+        $totalEmployees      = Employee::count();
+        $activeEmployees     = Employee::active()->count();
+        $inactiveEmployees   = Employee::where('status', 'inactive')->count();
         $terminatedEmployees = Employee::where('status', 'terminated')->count();
 
         $employeesByPosition = Employee::select('position', DB::raw('count(*) as total'))
