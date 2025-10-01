@@ -27,7 +27,7 @@ class EmployeeSeeder extends Seeder
 
                 $positions = ['Kasir', 'Admin', 'Manager', 'Staff'];
                 $statuses = ['active', 'active', 'active', 'inactive']; // Kebanyakan aktif
-                
+
                 Employee::create([
                     'user_id' => $user->id,
                     'employee_id' => 'EMP' . date('Y') . str_pad($index + 1, 4, '0', STR_PAD_LEFT),

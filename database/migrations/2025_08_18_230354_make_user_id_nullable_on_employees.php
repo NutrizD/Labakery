@@ -9,9 +9,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('employees', function (Blueprint $table) {
-            // Abaikan jika kolom tidak ada; jika ada, jadikan nullable
             if (Schema::hasColumn('employees', 'user_id')) {
-                $table->foreignId('user_id')->nullable()->change();
+                $table->unsignedBigInteger('user_id')->nullable()->change();
             }
         });
     }
@@ -20,7 +19,7 @@ return new class extends Migration
     {
         Schema::table('employees', function (Blueprint $table) {
             if (Schema::hasColumn('employees', 'user_id')) {
-                $table->foreignId('user_id')->nullable(false)->change();
+                $table->unsignedBigInteger('user_id')->nullable(false)->change();
             }
         });
     }
